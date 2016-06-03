@@ -1,0 +1,69 @@
+.irow{
+	height: 265px;
+}
+.irow > a >img{
+	height: 265px;
+}
+.x{
+	height: 383px;
+}
+.x > a > img{
+	height: 383px;
+}
+.z{
+	height: 413px;
+}
+.z > a > img{
+	height: 413px;
+
+}
+@media screen and (max-width: 1280px){
+.irow{
+	height: 210px;
+}
+.irow > a >img{
+	height: 210px;
+}
+.x{
+	height: 304px;
+}
+.x > a > img{
+	height: 304px;
+}
+.z{
+	height: 330px;
+}
+.z > a > img{
+	height: 330px;
+
+}
+}
+@media screen and (min-width: 1680px)
+{
+.irow{
+	height: 310px;
+}
+.irow > a >img{
+	height: 310px;
+}
+.x{
+	height: 449px;
+}
+.x > a > img{
+	height: 449px;
+}
+.z{
+	height: 485px;
+}
+.z > a > img{
+	height: 485px;
+
+}
+}
+.buttons{
+	margin: 4em;
+	text-align: center;
+}
+.buttons > a{
+	margin: 0 4em;
+}
