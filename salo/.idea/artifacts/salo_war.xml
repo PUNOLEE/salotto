@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="salo:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="salojava.war">
+      <element id="artifact" artifact-name="salo:war exploded" />
+    </root>
+  </artifact>
+</component>

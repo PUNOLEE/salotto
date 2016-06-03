@@ -1,0 +1,6 @@
+#header .main ul li > a {
+    text-indent: 0;
+    font-size: 0.7em;
+    margin-left: 10px;
+    margin-right: 30px;
+}

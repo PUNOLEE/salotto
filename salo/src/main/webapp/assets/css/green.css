@@ -1,0 +1,28 @@
+.icredits {
+    -webkit-transition: all 0.1s ease-out;
+    -moz-transition: all 0.1s ease-out;
+    transition: all 0.1s ease-out;
+    opacity: 1;
+    color: #fff;
+    position: absolute;
+  	bottom: 20px;
+    right: 20px;
+    text-align: right;
+    z-index: 4;
+}
+.icredits > span {
+    display: block ;
+    font-size: 11px;
+}
+
+.icredits >span >a {
+    font-size: 11px;
+    font-weight: none;
+    text-decoration: none;
+    color: white !important;
+    position: relative;
+}
+.license {
+    margin-top: 5px;
+    float:right !important;
+}
