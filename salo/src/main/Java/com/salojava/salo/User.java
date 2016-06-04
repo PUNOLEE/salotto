@@ -131,5 +131,33 @@ public class User {
     private String ULens;
     private String UMisc;
     private int UBScore;
+    private String UFirstname;
+
+    public String getUFirstname() {
+        return UFirstname;
+    }
+
+    public void setUFirstname(String UFirstname) {
+        this.UFirstname = UFirstname;
+    }
+
+    public String getULastname() {
+        return ULastname;
+    }
+
+    public void setULastname(String ULastname) {
+        this.ULastname = ULastname;
+    }
+
+    public String getUBirthday() {
+        return UBirthday;
+    }
+
+    public void setUBirthday(String UBirthday) {
+        this.UBirthday = UBirthday;
+    }
+
+    private String ULastname;
+    private String UBirthday;
 
 }
