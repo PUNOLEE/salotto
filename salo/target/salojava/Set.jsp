@@ -46,6 +46,8 @@
         </ul>
       </div>
       <div class="col d6x5 clearafter">
+        <form method="post" action="" onsubmit="return reg(this);" autocomplete="off" name="">
+
         <div class="controlgroup d12x5 g1 margin">
 
           <h3>
@@ -60,15 +62,15 @@
 
             <div class="checkinfo">
               <label for="username" class="smalllabel">用户名</label>
-              <div class="showbox"><input type="text" name="username" id="username" value="PUNO_" class="full" placeholder="Your username"></div>
+              <div class="showbox"><input type="text" name="username" id="username" value="" class="full" placeholder="Your username"></div>
             </div>
             <div class="clear"></div>
 
             <!-- User email -->
             <div class="check mail"></div>
             <div class="checkinfo shadow_email">
-              <label for="shadow_email" class="smalllabel">邮箱</label>
-              <input type="text" name="shadow_email" id="shadow_email" value="punolee@outlook.com" class="full" placeholder="your@email.com">
+              <label for="email" class="smalllabel">邮箱</label>
+              <input type="text" name="email" id="email" value="<%=user.getUMail() %>" class="full" placeholder="" READONLY="readonly">
             </div>
             <div class="clear"></div>
 
@@ -76,7 +78,7 @@
             <div class="check person"></div>
             <div class="checkinfo">
               <label for="firstname" class="smalllabel">姓</label>
-              <input type="text" name="firstname" id="firstname" value="李" class="full" placeholder="Your name">
+              <input type="text" name="firstname" id="firstname" value="" class="full" placeholder="Your name">
             </div>
             <div class="clear"></div>
 
@@ -84,7 +86,7 @@
             <div class="check person"></div>
             <div class="checkinfo">
               <label for="lastname" class="smalllabel">名</label>
-              <input type="text" name="lastname" id="lastname" value="凌云" class="full" placeholder="Your surname">
+              <input type="text" name="lastname" id="lastname" value="" class="full" placeholder="Your surname">
             </div>
             <div class="clear"></div>
 
@@ -109,7 +111,7 @@
             <div class="checkinfo">
 
               <div class="settings-avatar-container">
-                <a href="" class="settings-avatar-image" style="background-image:url(images/avatar.jpg);"></a>
+                <a href="" class="settings-avatar-image" style="background-image:url(images2/avatar.jpg);"></a>
               </div>
               <div class="settings-avatar-upload">
                 <div>最大 500Kb 或 500px x 500px .</div>
@@ -154,9 +156,9 @@
             <div class="checkinfo">
               <label>地址</label>
               <div class="showbox">
-                <input type="text" name="city" id="city" value="上海" class="full bottom" placeholder="City">
+                <input type="text" name="city" id="city" value="" class="full bottom" placeholder="City">
                 <input type="text" name="state" id="state" class="full bottom" placeholder="区">
-                <input type="text" name="country" id="country" value="中国" class="full bottom" placeholder="Country">
+                <input type="text" name="country" id="country" value="" class="full bottom" placeholder="Country">
               </div>
             </div>
             <div class="clear"></div>
@@ -170,11 +172,11 @@
                 <ul id="gearlist">
                   <li class="type-camera">
                     <input name="camera[][id]" type="hidden">
-                    <input type="text" name="camera[][name]" class="small"></li>
+                    <input type="text" name="camera" id="camera" class="small"></li>
                   <li class="type-lens"><input type="hidden" name="lens[][id]" value="">
-                    <input type="text" name="lens[][name]" class="small"></li>
+                    <input type="text" name="lens" id="lens" class="small"></li>
                   <li class="type-misc"><input type="hidden" name="misc[][id]" value="">
-                    <input type="text" name="misc[][name]" class="small"></li>
+                    <input type="text" name="misc" id="misc" class="small"></li>
                 </ul>
               </div>
             </div>
@@ -187,6 +189,7 @@
           </div>
           <div class="clear"></div>
         </div>
+          </form>
       </div>
 
 
