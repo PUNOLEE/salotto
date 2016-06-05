@@ -1,9 +1,9 @@
-<%@ page contentType="text/html;charset=GB2312" %>
+<%@ page contentType="text/html;charset=utf-8" %>
 <!DOCTYPE HTML>
 <html>
 <head>
     <title>Untitled</title>
-    <meta http-equiv="Content-Type" contentType="text/html;charset=GB2312"/>
+    <meta http-equiv="Content-Type" contentType="text/html;charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -19,8 +19,8 @@
         <h1><a href="index.jsp">SALOTTO</a></h1>
         <nav id="nav">
             <ul>
-                <li><a href="Signup.jsp" >ע��</a></li>
-                <li><a href="Login.jsp" >��¼</a></li>
+                <li><a href="Signup.jsp" >注册</a></li>
+                <li><a href="Login.jsp" >登录</a></li>
             </ul>
         </nav>
     </header>
@@ -31,15 +31,15 @@
             <center><img src="images/SALOTTO2.png"></center>
 
             <header>
-                <h4 style="font-weight:normal;">־Ȥ��Ͷ���ۻ�һ��</h4>
+                <h4 style="font-weight:normal;">志趣相投／聚会一堂</h4>
             </header>
 
         </div>
         <div class="icredits">
 							<span >
-							ͼƬ��Դ
+							图片来源
 							<a href="https://500px.com/morganphillips" target="_blank">
-                                Ҷ����
+                                叶流徽
                             </a>
 							</span>
             <div class="fade_bottom"></div>
@@ -49,9 +49,9 @@
     <!-- Intro -->
     <section id="intro" class="wrapper style1">
         <div class="container">
-            <h2>��ɳ����<span style="font-size:0.8em;">һ����Ӱ�����ߵĻ���</span></h2>
+            <h2>“沙龙”<span style="font-size:0.8em;">一个摄影爱好者的基地</span></h2>
             <footer>
-                <p>Դ��������ﵥ��"Salotto"��ԭ��ָ����װ��������Ʒ�����ӡ�</p>
+                <p>源于意大利语单词"Salotto"，原意指的是装点有美术品的屋子。</p>
 
 
             </footer>
