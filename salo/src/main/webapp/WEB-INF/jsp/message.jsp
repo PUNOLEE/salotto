@@ -3,15 +3,15 @@
   Created by IntelliJ IDEA.
   User: PunoLee
   Date: 16/6/2
-  Time: 上午11:18
+  Time: 涓婂崍11:18
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=GB2312" language="java" %>
+<%@ page contentType="text/html;charset=utf-8" language="java" %>
 <html>
 <head>
-  <title>消息</title>
-  <meta http-equiv="Content-Type" contentType="text/html;charset=GB2312"/>
-  <meta http-equiv= "refresh" content= "2;url=../../Login.jsp ">
+  <title>娑堟伅</title>
+  <meta http-equiv="Content-Type" contentType="text/html;charset=utf-8"/>
+  <meta http-equiv= "refresh" content= "2;url=Login.jsp ">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <!--[if lte IE 8]><script src="assets2/js/ie/html5shiv.js"></script><![endif]-->
   <link rel="stylesheet" href="assets2/css/main.css" />

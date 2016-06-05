@@ -2,14 +2,14 @@
   Created by IntelliJ IDEA.
   User: PunoLee
   Date: 16/6/2
-  Time: 上午11:18
+  Time: 涓婂崍11:18
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=GB2312" language="java" %>
+<%@ page contentType="text/html;charset=utf-8" language="java" %>
 <html>
 <head>
-  <title>注册</title>
-  <meta http-equiv="Content-Type" contentType="text/html;charset=GB2312"/>
+  <title>娉ㄥ唽</title>
+  <meta http-equiv="Content-Type" contentType="text/html;charset=utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <!--[if lte IE 8]><script src="assets2/js/ie/html5shiv.js"></script><![endif]-->
   <link rel="stylesheet" href="assets2/css/main.css" />
@@ -30,20 +30,20 @@
 
   <header id="header">
     <img src="images2/logo.png" class="logo">
-    <h1><a href="index.jsp">SALOTTO 沙龙</a></h1>
+    <h1><a href="index.jsp">SALOTTO 娌欓緳</a></h1>
     <nav class="links">
       <ul>
-        <li><a href="index.jsp">首页</a></li>
-        <li><a href="#">图</a></li>
-        <li><a href="#">活动</a></li>
-        <li><a href="#">资讯</a></li>
-        <li><a href="#">论坛</a></li>
-        <li><a href="#">红娘</a></li>
+        <li><a href="index.jsp">棣栭〉</a></li>
+        <li><a href="#">鍥�</a></li>
+        <li><a href="#">娲诲姩</a></li>
+        <li><a href="#">璧勮</a></li>
+        <li><a href="#">璁哄潧</a></li>
+        <li><a href="#">绾㈠</a></li>
       </ul>
     </nav>
     <nav class="main">
       <ul>
-        <li><a  href="Login.jsp">登录</a></li>
+        <li><a  href="Login.jsp">鐧诲綍</a></li>
 
       </ul>
     </nav>
@@ -68,7 +68,7 @@
           <!-- User email -->
           <div class="check mail"></div>
           <div class="checkinfo shadow_email">
-            <label for="email" class="smalllabel">邮箱</label>
+            <label for="email" class="smalllabel">閭</label>
             <input type="text" name="email" id="email" value="" class="full" placeholder="your@email.com">
           </div>
           <div class="clear"></div>
@@ -76,16 +76,16 @@
           <!-- Password -->
 
           <div class="checkinfo">
-            <label for="password" class="smalllabel">密码</label>
+            <label for="password" class="smalllabel">瀵嗙爜</label>
             <div class="showbox"><input type="password" name="password" id="upassword" value="" class="full" placeholder=""></div>
           </div>
           <div class="checkinfo">
-            <label for="password" class="smalllabel">确认密码</label>
+            <label for="password" class="smalllabel">纭瀵嗙爜</label>
             <div class="showbox"><input type="password" name="password" id="password" value="" class="full" placeholder="" onkeyup="pw()"></div>
           </div>
           <div class="clear"><span id="tishi"></span></div>
 
-          <input type="submit" class="button login" value="注册">
+          <input type="submit" class="button login" value="娉ㄥ唽">
 
           <!-- Analytics Tracking Code -->
         </div>

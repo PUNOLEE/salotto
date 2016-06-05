@@ -13,7 +13,7 @@
         </init-param>
         <init-param>
             <param-name>url</param-name>
-            <param-value>jdbc:mysql://localhost:3306/salotto</param-value>
+            <param-value>jdbc:mysql://localhost:3306/salotto?characterEncoding=UTF-8</param-value>
         </init-param>
         <init-param>
             <param-name>user</param-name>
@@ -25,6 +25,34 @@
         </init-param>
 
     </servlet>
+    <servlet>
+        <servlet-name>EditServlet</servlet-name>
+        <servlet-class>com.salojava.servlet.EditServlet</servlet-class>
+        <init-param>
+            <param-name>savePath</param-name>
+            <param-value>uploads</param-value>
+        </init-param>
+        <init-param>
+            <param-name>driverclass</param-name>
+            <param-value>com.mysql.jdbc.Driver</param-value>
+        </init-param>
+        <init-param>
+            <param-name>url</param-name>
+            <param-value>jdbc:mysql://localhost:3306/salotto?characterEncoding=UTF-8</param-value>
+        </init-param>
+        <init-param>
+            <param-name>user</param-name>
+            <param-value>root</param-value>
+        </init-param>
+        <init-param>
+            <param-name>password</param-name>
+            <param-value>root</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EditServlet</servlet-name>
+        <url-pattern>/EditServlet</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>RegServlet</servlet-name>
         <url-pattern>/Signup</url-pattern>

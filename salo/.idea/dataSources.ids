@@ -9,22 +9,22 @@
     <schema name="" catalog="salotto"/>
     <table name="users" schema="" catalog="salotto" type="TABLE">
       <column name="uID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="uName" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="uName" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12" def="Jyc="/>
       <column name="uPwd" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
       <column name="uPhoto" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
       <column name="uMail" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
-      <column name="uDescribe" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="uDescribe" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12" def="Jyc="/>
       <column name="uGender" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
-      <column name="uAddCity" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
-      <column name="uAddCountry" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
-      <column name="uAddArea" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
-      <column name="uCamera" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
-      <column name="uLens" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
-      <column name="uMisc" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="uAddCity" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12" def="Jyc="/>
+      <column name="uAddCountry" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12" def="Jyc="/>
+      <column name="uAddArea" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12" def="Jyc="/>
+      <column name="uCamera" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12" def="Jyc="/>
+      <column name="uLens" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12" def="Jyc="/>
+      <column name="uMisc" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12" def="Jyc="/>
       <column name="uBScore" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
-      <column name="uFirstname" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
-      <column name="uLastname" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
-      <column name="uBirthday" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="uFirstname" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12" def="Jyc="/>
+      <column name="uLastname" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12" def="Jyc="/>
+      <column name="uBirthday" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12" def="Jyc="/>
       <primary-key name="PRIMARY" columns="uID"/>
     </table>
   </data-source>

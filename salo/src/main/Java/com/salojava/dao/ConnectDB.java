@@ -14,7 +14,7 @@ public class ConnectDB {
             // 加载驱动
             Class.forName("com.mysql.jdbc.Driver");
             // 数据库连接url
-            String url = "jdbc:mysql://localhost:3306/salotto";
+            String url = "jdbc:mysql://localhost:3306/salotto?characterEncoding=UTF-8";
             // 获取数据库连接
             conn = DriverManager.getConnection(url, "root", "root");
         } catch (Exception e) {

@@ -32,7 +32,7 @@ public class LoginServlet extends HttpServlet {
         }else{
 
             request.setAttribute("info", "Incorrect username or password");
-            request.getRequestDispatcher("WEB-INF/jsp/message2.jsp").forward(request, response);
+            request.getRequestDispatcher("WEB-INF/jsp/message.jsp").forward(request, response);
         }
     }
 

@@ -1,16 +1,17 @@
 <%@ page import="com.salojava.salo.User" %>
+<%@ page import="com.salojava.dao.UserDao" %>
 <%--
   Created by IntelliJ IDEA.
   User: PunoLee
   Date: 16/6/3
-  Time: ÏÂÎç3:39
+  Time: ä¸‹åˆ3:39
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=GB2312" language="java" %>
+<%@ page  pageEncoding="UTF-8" contentType="text/html;charset=utf-8" language="java" %>
 <html>
 <head>
-  <title>ÉèÖÃ</title>
-  <meta http-equiv="Content-Type" contentType="text/html;charset=GB2312"/>
+  <title>è®¾ç½®</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <!--[if lte IE 8]><script src="assets2/js/ie/html5shiv.js"></script><![endif]-->
   <link rel="stylesheet" href="assets2/css/main.css" />
@@ -27,9 +28,9 @@
   <center>
     <div class="navbar-secondary">
       <ul class="navbar-subnav">
-        <li class="active"><a href="#">ÉèÖÃ</a></li>
-        <li><a href="#">ÎÒµÄºÃÓÑ</a></li>
-        <li><a href="#">Ïà²á</a></li>
+        <li class="active"><a href="#">è®¾ç½®</a></li>
+        <li><a href="#">æˆ‘çš„å¥½å‹</a></li>
+        <li><a href="#">ç›¸å†Œ</a></li>
       </ul>
     </div></center>
   <!-- Main -->
@@ -38,15 +39,19 @@
       <div class="col d6" id="security_settings_menu">
         <ul class="rollover boxed tabs">
           <li class="active">
-            <a href="" class="setstyle">¸öÈË×ÊÁÏ</a>
+            <a href="" class="setstyle">ä¸ªäººèµ„æ–™</a>
           </li>
-          <li><a href="" class="setstyle set2">Í¨Öª</a></li>
-          <li><a href="" class="setstyle set2">ÎÒµÄÊÕ²Ø</a></li>
-          <li><a href="" class="setstyle set2">ÎÒµÄÆÀÂÛ</a></li>
+          <li><a href="" class="setstyle set2">é€šçŸ¥</a></li>
+          <li><a href="" class="setstyle set2">æˆ‘çš„æ”¶è—</a></li>
+          <li><a href="" class="setstyle set2">æˆ‘çš„è¯„è®º</a></li>
         </ul>
       </div>
       <div class="col d6x5 clearafter">
-        <form method="post" action="" onsubmit="return reg(this);" autocomplete="off" name="">
+        <%
+          UserDao userDao=new UserDao();
+          user=userDao.finduser(user.getUMail());
+        %>
+        <form method="post" enctype="multipart/form-data" action="EditServlet" onsubmit="return reg(this);" autocomplete="off" name="" >
 
         <div class="controlgroup d12x5 g1 margin">
 
@@ -61,40 +66,40 @@
             <!-- Username -->
 
             <div class="checkinfo">
-              <label for="username" class="smalllabel">ÓÃ»§Ãû</label>
-              <div class="showbox"><input type="text" name="username" id="username" value="" class="full" placeholder="Your username"></div>
+              <label for="username" class="smalllabel">ç”¨æˆ·å</label>
+              <div class="showbox"><input type="text" name="username" id="username" value="<%=user.getUName() %> " class="full" placeholder="Your username"></div>
             </div>
             <div class="clear"></div>
 
             <!-- User email -->
             <div class="check mail"></div>
             <div class="checkinfo shadow_email">
-              <label for="email" class="smalllabel">ÓÊÏä</label>
-              <input type="text" name="email" id="email" value="<%=user.getUMail() %>" class="full" placeholder="" READONLY="readonly">
+              <label for="email" class="smalllabel">é‚®ç®±</label>
+              <input type="text" name="email" id="email" value="<%=user.getUMail() %>" class="full" placeholder="" readonly="readonly">
             </div>
             <div class="clear"></div>
 
             <!-- User First Name -->
             <div class="check person"></div>
             <div class="checkinfo">
-              <label for="firstname" class="smalllabel">ĞÕ</label>
-              <input type="text" name="firstname" id="firstname" value="" class="full" placeholder="Your name">
+              <label for="firstname" class="smalllabel">å§“</label>
+              <input type="text" name="firstname" id="firstname" value="<%=user.getUFirstname() %> " class="full" placeholder="Your name">
             </div>
             <div class="clear"></div>
 
             <!-- User Last Name -->
             <div class="check person"></div>
             <div class="checkinfo">
-              <label for="lastname" class="smalllabel">Ãû</label>
-              <input type="text" name="lastname" id="lastname" value="" class="full" placeholder="Your surname">
+              <label for="lastname" class="smalllabel">å</label>
+              <input type="text" name="lastname" id="lastname" value="<%=user.getULastname() %> " class="full" placeholder="Your surname">
             </div>
             <div class="clear"></div>
 
             <!-- User Birthday -->
             <div class="check person"></div>
             <div class="checkinfo">
-              <label for="birthday" class="smalllabel">ÉúÈÕ</label>
-              <input type="date" name="birthday" id="birthday" class="full" placeholder="YYYY-MM-DD" min="1900-01-01">
+              <label for="birthday" class="smalllabel">ç”Ÿæ—¥</label>
+              <input type="date" name="birthday" id="birthday" value="<%=user.getUBirthday() %>" class="full" placeholder="YYYY-MM-DD" min="1900-01-01">
             </div>
             <div class="clear"></div>
 
@@ -111,15 +116,15 @@
             <div class="checkinfo">
 
               <div class="settings-avatar-container">
-                <a href="" class="settings-avatar-image" style="background-image:url(images2/avatar.jpg);"></a>
+                <a href="" class="settings-avatar-image" style="background-image:url(uploads/<%=user.getUPhoto()%>);"></a>
               </div>
               <div class="settings-avatar-upload">
-                <div>×î´ó 500Kb »ò 500px x 500px .</div>
+                <div>æœ€å¤§ 500Kb æˆ– 500px x 500px .</div>
                 <div id="avatar-upload">
-                  <input id="user_photo" type="file" data-userid="17104467">
+                  <input id="user_photo" name="File_upload" type="file" >
                 </div>
                 <div class="showbox">
-                  <a href="javascript:px.deleteUserPhoto()" class="button small red">É¾³ı</a>
+                  <a href="javascript:px.deleteUserPhoto()" class="button small red">åˆ é™¤</a>
                 </div>
                 <div class="clear"></div>
               </div>
@@ -129,24 +134,30 @@
             <!-- User Biography -->
             <div class="check person"></div>
             <div class="checkinfo">
-              <label for="about" class="smalllabel">¼ò½é</label>
-              <textarea name="about" id="about" class="full" placeholder="Tell us something about you">Every thing that kills me makes me alive.</textarea>
+              <label for="about" class="smalllabel">ç®€ä»‹</label>
+              <textarea name="about" id="about" class="full" placeholder="Tell us something about you"><%=user.getUDescribe() %></textarea>
             </div>
             <div class="clear"></div>
 
             <!-- User Gender -->
             <div class="check person"></div>
             <div class="checkinfo">
-              <label for="sex_1">ĞÔ±ğ</label>
-              <div id="gender" class="showbox">
-                <input type="radio" name="sex" id="sex_1" value="1">
-                <label for="sex_1">ÄĞ</label>
+              <label for="sex_1">æ€§åˆ«</label>
+              <div  class="showbox">
+                <input type="radio" name="sex" id="sex_1" value="1"  <% if(user.getUGender()==1){
+              %> checked <%
+              }else{%><%}%> >
+                <label for="sex_1">ç”·</label>
 
-                <input type="radio" name="sex" id="sex_2" value="2">
-                <label for="sex_2">Å®</label>
+                <input type="radio" name="sex" id="sex_2" value="2" <% if(user.getUGender()==2){
+              %> checked <%
+              }else{%><%}%>>
+                <label for="sex_2">å¥³</label>
 
-                <input type="radio" name="sex" id="sex_0" value="0">
-                <label for="sex_0">²»Ã÷È·</label>
+                <input type="radio" name="sex" id="sex_0" value="0" <% if(user.getUGender()==0){
+              %> checked <%
+              }else{%><%}%>>
+                <label for="sex_0">ä¸æ˜ç¡®</label>
               </div>
             </div>
             <div class="clear"></div>
@@ -154,11 +165,12 @@
             <!-- User Location -->
             <div class="check point"></div>
             <div class="checkinfo">
-              <label>µØÖ·</label>
+              <label>åœ°å€</label>
               <div class="showbox">
-                <input type="text" name="city" id="city" value="" class="full bottom" placeholder="City">
-                <input type="text" name="state" id="state" class="full bottom" placeholder="Çø">
-                <input type="text" name="country" id="country" value="" class="full bottom" placeholder="Country">
+                <input type="text" name="city" id="city" value="<%=user.getUAddCity() %> " class="full bottom" placeholder="å¸‚">
+                <input type="text" name="area" id="area" value="<%=user.getUAddArea() %> " class="full bottom" placeholder="åŒº">
+                <input type="text" name="country" id="country" value="<%=user.getUAddCountry() %> " class="full bottom" placeholder="å›½å®¶">
+
               </div>
             </div>
             <div class="clear"></div>
@@ -167,15 +179,15 @@
             <div class="check gear"></div>
             <div class="checkinfo">
               <!-- add things -->
-              <label>Éè±¸</label>
+              <label>è®¾å¤‡</label>
               <div class="showbox">
                 <ul id="gearlist">
                   <li class="type-camera">
                     <input name="camera[][id]" type="hidden">
-                    <input type="text" name="camera" id="camera" class="small"></li>
-                  <li class="type-lens"><input type="hidden" name="lens[][id]" value="">
+                    <input type="text" name="camera" id="camera" class="small" value="<%=user.getUCamera() %> "></li>
+                  <li class="type-lens"><input type="hidden" name="lens[][id]" value="<%=user.getULens() %> " >
                     <input type="text" name="lens" id="lens" class="small"></li>
-                  <li class="type-misc"><input type="hidden" name="misc[][id]" value="">
+                  <li class="type-misc"><input type="hidden" name="misc[][id]" value="<%=user.getUMisc() %> " >
                     <input type="text" name="misc" id="misc" class="small"></li>
                 </ul>
               </div>
@@ -205,7 +217,21 @@
 
 
 </div>
+<script>
+  function reg(form){
+    if(form.username.value == ""){
+      alert("å–ä¸ªå¥½å¬çš„åå­—å§!");
+      return false;
+    }
+    if(form.city.value == ""||form.area.value == ""||form.country.value == ""){
+      alert("è¯·å¡«å†™æ‚¨çš„åœ°å€!");
+      return false;
+    }
+    alert("ç¡®è®¤ä¿®æ”¹å—ï¼Ÿ");
 
+
+  }
+</script>
 <!-- Scripts -->
 <script src="assets2/js/jquery.min.js"></script>
 <script src="assets2/js/skel.min.js"></script>
