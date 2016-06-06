@@ -1,3 +1,4 @@
+<%@ page import="com.salojava.dao.UserDao" %>
 <%--
   Created by IntelliJ IDEA.
   User: PunoLee
@@ -28,6 +29,8 @@
       <%
 
         User user = (User)session.getAttribute("user");
+        UserDao userDao=new UserDao();
+        user=userDao.finduser(user.getUMail());
         if(user!=null){
       %>
       <li class="search">
@@ -61,9 +64,9 @@
     <ul class="links">
 
       <li>
-        <a href="#" >
-          <div class="author" id="account"><img src="images2/avatar.jpg" alt="" /></div>
-          <h3 class="bar">PUNO_</h3>
+        <a href="Set.jsp" >
+          <div class="author" id="account"><img src="uploads/<%=user.getUPhoto()%>" alt="" /></div>
+          <h3 class="bar"><%=user.getUName()%></h3>
 
         </a>
         <a href="Exit" class="button" id="signout">登出</a>
@@ -111,7 +114,7 @@
         </a>
       </li>
       <li>
-        <a href="#">
+        <a href="Set.jsp">
           <h3>设置</h3>
 
         </a>

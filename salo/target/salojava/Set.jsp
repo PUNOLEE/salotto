@@ -48,8 +48,7 @@
       </div>
       <div class="col d6x5 clearafter">
         <%
-          UserDao userDao=new UserDao();
-          user=userDao.finduser(user.getUMail());
+
         %>
         <form method="post" enctype="multipart/form-data" action="EditServlet" onsubmit="return reg(this);" autocomplete="off" name="" >
 
