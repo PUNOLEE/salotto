@@ -29,8 +29,7 @@
       <%
 
         User user = (User)session.getAttribute("user");
-        UserDao userDao=new UserDao();
-        user=userDao.finduser(user.getUMail());
+
         if(user!=null){
       %>
       <li class="search">
@@ -63,6 +62,11 @@
   <section>
     <ul class="links">
 
+<%
+  if(user!=null){
+  UserDao userDao=new UserDao();
+  user=userDao.finduser(user.getUMail());
+%>
       <li>
         <a href="Set.jsp" >
           <div class="author" id="account"><img src="uploads/<%=user.getUPhoto()%>" alt="" /></div>
@@ -71,7 +75,8 @@
         </a>
         <a href="Exit" class="button" id="signout">登出</a>
       </li>
-
+<%
+  }%>
 
 
     </ul>
