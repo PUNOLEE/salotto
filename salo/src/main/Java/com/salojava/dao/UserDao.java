@@ -131,6 +131,7 @@ public class UserDao {
                 // 实例化一个用户对象
                 user = new User();
                 // 对用户对象属性赋值
+                user.setUId(rs.getInt("uID"));
                 user.setUName(rs.getString("uName"));
                 user.setUPhoto(rs.getString("uPhoto"));
                 user.setUPassword(rs.getString("uPwd"));
