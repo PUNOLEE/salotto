@@ -7,18 +7,22 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=utf-8" %>
-
+<style type="text/css">
+  #header #search.visible {
+    padding: 0.5em 0.5em 0 0;
+  }
+</style>
 <!-- Header -->
 
 <header id="header">
   <img src="images2/logo.png" class="logo">
-  <h1><a href="../../index.jsp">SALOTTO 沙龙</a></h1>
+  <h1><a href="index.jsp">SALOTTO 沙龙</a></h1>
   <nav class="links">
     <ul>
-      <li><a href="../../index.jsp">首页</a></li>
-      <li><a href="#">图</a></li>
+      <li><a href="index.jsp">首页</a></li>
+      <li><a href="Pictures.jsp?type=0">图</a></li>
       <li><a href="#">活动</a></li>
-      <li><a href="#">资讯</a></li>
+      <li><a href="News.jsp">资讯</a></li>
       <li><a href="#">论坛</a></li>
       <li><a href="#">红娘</a></li>
     </ul>
@@ -34,11 +38,13 @@
       %>
       <li class="search">
         <a class="fa-search" href="#search">Search</a>
-        <form id="search" method="get" action="#">
+        <form id="search" method="post" action="Search">
           <input type="text" name="query" placeholder="Search" />
         </form>
       </li>
-
+      <li class="Postw">
+        <a class="fa-upload" href="Upload.jsp">发布</a>
+      </li>
       <li class="menu">
         <a class="fa-bars" href="#menu">菜单</a>
       </li>
@@ -84,7 +90,7 @@
   <section>
     <ul class="links">
       <li>
-        <a href="#">
+        <a href="Account.jsp?uID=<%=user.getUId()%>">
           <h3 >我的主页</h3>
 
         </a>
@@ -113,7 +119,7 @@
         </a>
       </li>
       <li>
-        <a href="#">
+        <a href="Comment.jsp">
           <h3>我的评论</h3>
 
         </a>
