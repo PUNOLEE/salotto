@@ -1,0 +1,514 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>上传</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/pop.css" />
+		<link rel="stylesheet" href="assets/css/tag.css" />
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+		<link href="assets/css/fileinput.css" media="all" rel="stylesheet" type="text/css" />	
+		<script src="assets/js/jquery.min.js"></script>
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	
+	<body >
+
+		<!-- Wrapper -->
+			<div id="wrapper" >
+
+				<!-- Header -->
+					<header id="header">
+						<img src="images/logo.png" class="logo">
+						<h1><a href="#">SALOTTO 沙龙</a></h1>
+						<nav class="links">
+							<ul>
+								<li><a href="#">首页</a></li>
+								<li><a href="#">图</a></li>
+								<li><a href="#">活动</a></li>
+								<li><a href="#">资讯</a></li>
+								<li><a href="#">论坛</a></li>
+								<li><a href="#">红娘</a></li>
+							</ul>
+						</nav>
+						<nav class="main">
+							<ul>
+								<li class="search">
+									<a class="fa-search" href="#search">Search</a>
+									<form id="search" method="get" action="#">
+										<input type="text" name="query" placeholder="Search" />
+									</form>
+								</li>
+								<li class="menu">
+									<a class="fa-bars" href="#menu">Menu</a>
+								</li>
+							</ul>
+						</nav>
+					</header>
+					
+				<!-- Menu -->
+					<section id="menu">
+
+						
+
+						<!-- Links -->
+							<section>
+								<ul class="links">
+									
+									<li>
+										<a href="#" >
+											<div class="author" id="account"><img src="images/avatar.jpg" alt="" /></div>
+											<h3 class="bar">PUNO_</h3>
+											
+										</a>
+										<a href="#" class="button" id="signout">登出</a>
+									</li>
+
+									
+								
+								</ul>
+							</section>
+							<section>
+								<ul class="links">
+									<li>
+										<a href="#">
+											<h3 >我的主页</h3>
+											
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<h3>我的收藏</h3>
+											
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<h3>我的好友</h3>
+											
+										</a>
+									</li>
+									
+								</ul>
+							</section>
+							<section>
+								<ul class="links">
+									<li>
+										<a href="#">
+											<h3 >与我相关</h3>
+											
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<h3>我的评论</h3>
+											
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<h3>设置</h3>
+											
+										</a>
+									</li>
+									
+								</ul>
+							</section>
+						
+
+					</section>
+					
+				<!-- Main -->
+					<div id="main">
+						<form enctype="multipart/form-data">
+						<div class="container-default1" style="margin:0 auto;">
+						
+						<div class="controlgroup d12x5 g1 margin" >
+
+				      <h3>
+				        Photos' Information
+				      </h3>
+
+				      <div class="controls" style="min-height: 820px; overflow: hidden;">
+				        <div class="arrow"></div>
+
+
+ 						
+				        <!-- title-->
+				        <div class="check mail"></div>
+				        <div class="checkinfo title">
+				          <label for="title" class="smalllabel">标题</label>
+				            <input type="text" name="title" id="title" class="full" >
+				        </div>
+				        <div class="clear"></div>
+
+				        <!-- info -->
+						<div class="checkinfo">
+							<label for="bio" class="smalllabel">简介</label>
+          <textarea name="about" id="about" class="full" ></textarea>
+         </div>
+         <div class="clear"></div>
+
+				        <div class="checkinfo">
+				          <label for="tags" class="smalllabel">标签</label>
+				          <div class="showbox"><div class="tag-editor" id="tag-editor">
+				          <span><input type="hidden" name="tags[]" value="人文"><em class="tag">人文</em><a class="del" onclick="deleteItem(this)">x</a></span>
+				      <input class="text" type="text" name="tags[]" readonly="readonly"></div></div>
+				        
+				        <section class="tag-selector">
+	<span class="tag-selector-caret"></span>
+	<h3>常用的标签</h3>
+	<ul class="tag-selector-list tag-selector-mine clearfix">
+		<span class="tag-selector-caret"></span>
+					<li style=""><a href="javascript:void(0)" onclick="addItem(this)" class="tag-btn">人像</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">风光</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">色彩</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">尼康</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">黑白</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">人文</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">纪实</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">城市</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">小清新</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">上海</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">静物</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">35mm</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">夜景</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">美女</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">情感</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">花卉</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">情绪</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">动物</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">日系</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">杭州</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">猫</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">校园</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">复古</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">自拍</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">宠物</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">怀旧</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">酷</a>
+				                							</li><li><a href="javascript:void(0);" onclick="$(this).closest('.tag-selector-list').find('li').show();$(this).hide();return false;" style="color:#aaa">更多</a></li>
+			</ul>
+	<h3>题材</h3>
+	<ul class="tag-selector-list tag-selector-subject clearfix">
+		<span class="tag-selector-caret"></span>
+					<li style=""><a href="javascript:void(0)" class="tag-btn">人像</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">风光</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">纪实</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">街拍</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">城市</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">人文</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">旅行</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">美女</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">建筑</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">夜景</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">自然</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">少女</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">生活</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">静物</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">光影</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">植物</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">花卉</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">动物</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">校园</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">儿童</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">私房</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">生态</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">美食</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">昆虫</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">星空</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">婚礼</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">猫</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">日出</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">海</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">夏天</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">毕业</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">荷花</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">婚纱</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">铁路</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">夕阳</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">云</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">自拍</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">汽车</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">火车</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">Cosplay</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">宠物</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">运动</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">模特</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">黄昏</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">晚霞</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">雪山</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">乡村</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">舞台</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">情侣</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">倒影</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">大学</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">女孩</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">鸟</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">蓝天</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">长城</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">户外</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">阳光</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">地铁</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">古镇</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">森林</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">公园</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">室内</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">花草</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">青春</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">特写</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">草原</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">教堂</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">蝴蝶</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">学校</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">春天</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">水</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">雨</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">剪影</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">摇滚</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">童年</a>
+				                							</li><li><a href="javascript:void(0);" onclick="$(this).closest('.tag-selector-list').find('li').show();$(this).hide();return false;" style="color:#aaa">更多</a></li>
+			</ul>
+	<h3>风格</h3>
+	<ul class="tag-selector-list tag-selector-style clearfix">
+		<span class="tag-selector-caret"></span>
+					<li style=""><a href="javascript:void(0)" class="tag-btn">色彩</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">黑白</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">抓拍</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">小清新</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">情绪</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">日系</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">情感</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">后期</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">长曝光</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">微距</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">唯美</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">小品</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">写真</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">文艺</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">故事</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">极简主义</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">性感</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">复古</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">逆光</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">创意</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">艺术</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">时尚</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">画意</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">绿色</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">文化</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">安静</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">心情</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">现场</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">怀旧</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">HDR</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">可爱</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">观念</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">lightroom</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">概念</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">蓝色</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">超现实</a>
+				                							</li><li><a href="javascript:void(0);" onclick="$(this).closest('.tag-selector-list').find('li').show();$(this).hide();return false;" style="color:#aaa">更多</a></li>
+			</ul>
+	<h3>器材</h3>
+	<ul class="tag-selector-list tag-selector-equipment clearfix">
+		<span class="tag-selector-caret"></span>
+					<li style=""><a href="javascript:void(0)" class="tag-btn">佳能</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">尼康</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">手机</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">索尼</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">广角</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">50mm</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">35mm</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">胶片</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">富士</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">宾得</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">徕卡</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">iphone</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">奥林巴斯</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">28MM</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">定焦</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">85mm</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">理光</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">蔡司</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">D90</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">5d3</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">超广角</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">24-70</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">适马</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">哈苏</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">腾龙</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">狗头</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">大光圈</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">禄来</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">60D</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">卡片机</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">中画幅</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">单反</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">sl66</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">数码</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">Rolleiflex</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">美能达</a>
+				                                    </li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">华为手机</a>
+                							</li><li><a href="javascript:void(0);" onclick="$(this).closest('.tag-selector-list').find('li').show();$(this).hide();return false;" style="color:#aaa">更多</a></li>
+			</ul>
+	<h3>地区</h3>
+	<ul class="tag-selector-list tag-selector-location clearfix">
+		<span class="tag-selector-caret"></span>
+					<li style=""><a href="javascript:void(0)" class="tag-btn">北京</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">上海</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">广州</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">武汉</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">南京</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">深圳</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">成都</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">四川</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">杭州</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">重庆</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">云南</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">西安</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">中国</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">浙江</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">大连</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">厦门</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">苏州</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">新疆</a>
+							</li><li style=""><a href="javascript:void(0)" class="tag-btn">天津</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">长沙</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">香港</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">安徽</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">郑州</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">西藏</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">日本</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">福建</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">美国</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">贵州</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">昆明</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">青岛</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">江西</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">湖南</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">济南</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">意大利</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">哈尔滨</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">珠海</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">海南</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">台湾</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">欧洲</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">西湖</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">江苏</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">英国</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">新西兰</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">南昌</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">泰国</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">福州</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">山西</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">拉萨</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">三亚</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">江南</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">内蒙古</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">巴黎</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">桂林</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">青海</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">大理</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">外滩</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">德国</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">澳大利亚</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">马来西亚</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">斯里兰卡</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">澳门</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">故宫</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">海外</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">常州</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">法国</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">黄山</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">土耳其</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">尼泊尔</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">坝上</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">墨尔本</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">三里屯</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">韩国</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">鼓浪屿</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">加拿大</a>
+							</li><li style="display:none;"><a href="javascript:void(0)" class="tag-btn">纽约</a>
+				                							</li><li><a href="javascript:void(0);" onclick="$(this).closest('.tag-selector-list').find('li').show();$(this).hide();return false;" style="color:#aaa">更多</a></li>
+			</ul>
+	<h3>活动</h3>
+	<ul class="tag-selector-list tag-selector-event clearfix">
+		<span class="tag-selector-caret"></span>
+		                					</ul>
+</section>
+</div>
+				        <div class="clear"></div>
+
+
+				        <!-- Analytics Tracking Code -->
+				      </div>
+
+
+				    </div>
+				    <div class="controlgroup d12x5 g1 x">
+      <h3>Photos</h3>
+      <div class="controls" style="min-height: 820px; overflow: hidden;">
+        <div class="arrow"></div>
+        <div class="form-group">
+                    <input id="file-5" class="file" type="file" multiple data-preview-file-type="any" data-upload-url="#" data-preview-file-icon="">
+                </div>
+        
+        <div class="clear"></div>
+      </div>
+    </div>
+    <div class="linetop">
+      <div class="alignright">
+        <input type="submit" class="button green" value="上传">
+      </div>
+      <div class="clear"></div>
+    </div>
+				    
+    
+    
+							
+
+							
+						</div>
+					</form>
+						
+						
+
+					</div>
+
+			
+
+					
+
+			</div>
+		
+
+		<!-- Scripts -->
+			
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+			
+			<script src="assets/js/upload/fileinput.js" type="text/javascript"></script>
+    		<script src="assets/js/upload/fileinput_locale_zh.js" type="text/javascript"></script>
+
+    	<script type="text/javascript">
+    	function addItem(obj){
+    		var text=$(obj).html();
+    		var addHtml="<span><input type='hidden' name='tags[]'' value='"+text+"'><em class='tag'>"+text+"</em><a class='del'  onclick='deleteItem(this)'>x</a></span>";
+    		$("#tag-editor").find("input[type='text']").before(addHtml);
+    	}
+
+    	function deleteItem(obj){
+    		$(obj).closest("span").remove();
+    	}
+
+        </script>	
+
+	</body>
+</html>

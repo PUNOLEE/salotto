@@ -7,6 +7,70 @@
     </database-info>
     <case-sensitivity plain-identifiers="mixed" quoted-identifiers="upper"/>
     <schema name="" catalog="salotto"/>
+    <table name="Likes" schema="" catalog="salotto" type="TABLE">
+      <column name="lID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="pfID" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="LikesuID" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="lID"/>
+      <foreign-key name="luiduk" columns="LikesuID" ref-table="users" ref-schema="" ref-catalog="salotto" ref-columns="uID" update-rule="0" delete-rule="0" deferrability="2"/>
+      <foreign-key name="pfidukkk" columns="pfID" ref-table="portfolio" ref-schema="" ref-catalog="salotto" ref-columns="pfID" update-rule="0" delete-rule="0" deferrability="2"/>
+      <index name="luiduk_idx" unique="false" columns="LikesuID"/>
+      <index name="pfidukkk_idx" unique="false" columns="pfID"/>
+    </table>
+    <table name="follow" schema="" catalog="salotto" type="TABLE">
+      <column name="uID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="foID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="uID,foID"/>
+      <foreign-key name="uIdfk" columns="uID" ref-table="users" ref-schema="" ref-catalog="salotto" ref-columns="uID" update-rule="0" delete-rule="0" deferrability="2"/>
+      <foreign-key name="ufofk" columns="foID" ref-table="users" ref-schema="" ref-catalog="salotto" ref-columns="uID" update-rule="0" delete-rule="0" deferrability="2"/>
+      <index name="ufofk_idx" unique="false" columns="foID"/>
+    </table>
+    <table name="portfolio" schema="" catalog="salotto" type="TABLE">
+      <column name="pfID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="pfTitle" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="pfPCount" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="pfDescribe" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="pfTags" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="pfLikesCount" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="pfCommentCount" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="pfdate" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA="/>
+      <column name="uID" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="pfID"/>
+      <foreign-key name="pfuiduk" columns="uID" ref-table="users" ref-schema="" ref-catalog="salotto" ref-columns="uID" update-rule="0" delete-rule="0" deferrability="2"/>
+      <exported-key name="pfidukkk" table="Likes" schema="" catalog="salotto" columns="pfID"/>
+      <exported-key name="pfpidukk" table="portfolioPhotos" schema="" catalog="salotto" columns="pfID"/>
+      <index name="pfuiduk_idx" unique="false" columns="uID"/>
+    </table>
+    <table name="portfolioComments" schema="" catalog="salotto" type="TABLE">
+      <column name="pfCommentsID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="pfCommentsContent" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="pfID" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="uID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="pfCommentsDate" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA="/>
+      <column name="authorID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="pfCommentsID"/>
+      <foreign-key name="auibbdfk" columns="authorID" ref-table="users" ref-schema="" ref-catalog="salotto" ref-columns="uID" update-rule="0" delete-rule="0" deferrability="2"/>
+      <foreign-key name="ucfk" columns="uID" ref-table="users" ref-schema="" ref-catalog="salotto" ref-columns="uID" update-rule="0" delete-rule="0" deferrability="2"/>
+      <index name="auidfk_idx" unique="false" columns="authorID"/>
+      <index name="uidfk_idx" unique="false" columns="uID"/>
+    </table>
+    <table name="portfolioPhotos" schema="" catalog="salotto" type="TABLE">
+      <column name="pfPName" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="pfPID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="pfID" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="pfPID"/>
+      <foreign-key name="pfpidukk" columns="pfID" ref-table="portfolio" ref-schema="" ref-catalog="salotto" ref-columns="pfID" update-rule="0" delete-rule="0" deferrability="2"/>
+      <index name="pfpidukk_idx" unique="false" columns="pfID"/>
+    </table>
+    <table name="tags" schema="" catalog="salotto" type="TABLE">
+      <column name="tID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="tName" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="tPCount" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="tSCount" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="tCata" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="tID"/>
+      <index name="tName_UNIQUE" unique="true" columns="tName"/>
+    </table>
     <table name="users" schema="" catalog="salotto" type="TABLE">
       <column name="uID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="uName" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12" def="Jyc="/>
@@ -25,7 +89,42 @@
       <column name="uFirstname" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12" def="Jyc="/>
       <column name="uLastname" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12" def="Jyc="/>
       <column name="uBirthday" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12" def="Jyc="/>
+      <column name="uFollowing" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="uFollower" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
       <primary-key name="PRIMARY" columns="uID"/>
+      <exported-key name="luiduk" table="Likes" schema="" catalog="salotto" columns="LikesuID"/>
+      <exported-key name="uIdfk" table="follow" schema="" catalog="salotto" columns="uID"/>
+      <exported-key name="ufofk" table="follow" schema="" catalog="salotto" columns="foID"/>
+      <exported-key name="pfuiduk" table="portfolio" schema="" catalog="salotto" columns="uID"/>
+      <exported-key name="auibbdfk" table="portfolioComments" schema="" catalog="salotto" columns="authorID"/>
+      <exported-key name="ucfk" table="portfolioComments" schema="" catalog="salotto" columns="uID"/>
     </table>
+    <procedure name="insertre" schema="" catalog="salotto" type="1">
+      <prototype>
+        <parameter name="uid" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" type="1" index="1"/>
+        <parameter name="pftitle" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12" type="1" index="2"/>
+        <parameter name="pfdescribe" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12" type="1" index="3"/>
+        <parameter name="pftags" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12" type="1" index="4"/>
+        <parameter name="opfid" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" type="1" index="5"/>
+      </prototype>
+    </procedure>
+    <procedure name="tagsfind" schema="" catalog="salotto" type="1">
+      <prototype>
+        <parameter name="tname" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12" type="1" index="1"/>
+        <parameter name="tid" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" type="1" index="2"/>
+      </prototype>
+    </procedure>
+    <procedure name="test" schema="" catalog="salotto" type="1">
+      <prototype>
+        <parameter name="uid" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" type="1" index="1"/>
+        <parameter name="opfid" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" type="1" index="2"/>
+      </prototype>
+    </procedure>
+    <procedure name="updateLikes" schema="" catalog="salotto" type="1">
+      <prototype>
+        <parameter name="pfid" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" type="1" index="1"/>
+        <parameter name="yes" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" type="1" index="2"/>
+      </prototype>
+    </procedure>
   </data-source>
 </component>

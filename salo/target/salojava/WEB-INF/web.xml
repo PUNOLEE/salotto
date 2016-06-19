@@ -49,6 +49,55 @@
             <param-value>root</param-value>
         </init-param>
     </servlet>
+    <servlet>
+        <servlet-name>uploadProcessorServlet</servlet-name>
+        <servlet-class>com.salojava.servlet.UploadProcessorServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LikesServlet</servlet-name>
+        <servlet-class>com.salojava.servlet.LikesServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CommentServlet</servlet-name>
+        <servlet-class>com.salojava.servlet.CommentServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DeleteServlet</servlet-name>
+        <servlet-class>com.salojava.servlet.DeleteServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SearchServlet</servlet-name>
+        <servlet-class>com.salojava.servlet.SearchServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>FollowServlet</servlet-name>
+        <servlet-class>com.salojava.servlet.FollowServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SearchServlet</servlet-name>
+        <url-pattern>/Search</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteServlet</servlet-name>
+        <url-pattern>/Delete</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FollowServlet</servlet-name>
+        <url-pattern>/Follow</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>CommentServlet</servlet-name>
+        <url-pattern>/Comment</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LikesServlet</servlet-name>
+        <url-pattern>/Like</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>uploadProcessorServlet</servlet-name>
+        <url-pattern>/upload</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>EditServlet</servlet-name>
         <url-pattern>/EditServlet</url-pattern>

@@ -43,7 +43,7 @@
     </nav>
     <nav class="main">
       <ul>
-        <li><a  href="Signup.jsp">注册</a></li>
+        <li><a  href="Signup.jsp" class="signupbtn">注册</a></li>
 
       </ul>
     </nav>

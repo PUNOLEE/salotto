@@ -81,17 +81,17 @@
 
 }
 .container-default{
-	 width: 1000px;
+	 width: 1200px;
 	 margin: 0 auto;
 
 }
 .postx{
-	width: 750px;
+	width: 850px;
 	margin: 0 auto !important;
 	float: left;
 }
 #sidebar{
-	width: 250px;
+	width: 300px;
 	    float: left;
 	    margin: 0px;
 	    padding: 0px;
@@ -106,9 +106,9 @@
     margin-left: 25px !important;
 }
 #ifx{
-    width: 100%;
-    
-    max-width: 652px;
+    width: 652px;
+    height: auto;
+    background-size: contain;
    
 }
 .image.featured{
@@ -119,9 +119,7 @@
 
 
 #ifx2{
-   
-    
-    height: 100%;
+   width: 416.666;    
     display: inline-flex;
     margin-right: 3px;
     
@@ -133,8 +131,8 @@
 #ifx3{
    
     
-    height: 100%;
-    display: inline-flex;
+width: 208.333px;   
+ display: inline-flex;
     margin-left: 2px;
 
 }
@@ -157,20 +155,37 @@
     border-top: 0px;
 }
 .iii{
-    width: 652px;
+    width: 750px;
+    height: 500px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+     margin-bottom: 3px;
+   
+}
+.iiii{
+    width: 750px;
+    height: 350px;
+      
      margin-bottom: 3px;
    
 }
 .x{
   float: left;
-  width: calc(((100%-5px)*2)/3);
-  height: auto;
+    background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+  width: 500px;
+  height: inherit;
     
 }
 .z{
  float: left;
- width: calc(((100%-5px))/3);
-  height: auto;
+   background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+ width: 250px;
+  height: inherit;
 }
 .logo{
         margin-left: 20px;
@@ -403,4 +418,47 @@ body .alignright {
 }
 .button.login{
     margin-top: 2em;
+}
+.controlgroup.d12x5.g1.margin.comment{
+    width: 850px;
+}
+.checkinfo.comment{
+    width: 840px;
+    border: 1px solid #ccc;
+    margin-left: 13px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.xxcomment{
+    height: 5em;
+    background: rgba(160, 160, 160, 0.075);
+    border:solid 1px rgba(160, 160, 160, 0.3);
+    width: 300px;
+    padding: 10px;
+
+}
+.xxaction{
+    right: 5em;
+    position: absolute;
+}
+.xxaction > a{
+    margin-right: 20px;
+}
+.mycomment{
+    margin-top: 6em;
+
+}
+.mycomment>input{
+    margin-top: 10px;
+}
+.pn{
+    text-decoration: none;
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 6em;
+    margin-bottom: 4em;
+}
+.alignright.x{
+    width: 950px;
+    text-align: center;
 }
