@@ -39,11 +39,11 @@
       <div class="col d6" id="security_settings_menu">
         <ul class="rollover boxed tabs">
           <li class="active">
-            <a href="" class="setstyle">个人资料</a>
+            <a href="Set.jsp" class="setstyle">个人资料</a>
           </li>
           <li><a href="" class="setstyle set2">通知</a></li>
           <li><a href="" class="setstyle set2">我的收藏</a></li>
-          <li><a href="" class="setstyle set2">我的评论</a></li>
+          <li><a href="Comment.jsp" class="setstyle set2">我的评论</a></li>
         </ul>
       </div>
       <div class="col d6x5 clearafter">

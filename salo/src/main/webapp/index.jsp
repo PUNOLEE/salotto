@@ -1,3 +1,5 @@
+<%@ page import="com.salojava.salo.User" %>
+<%@ page import="com.salojava.dao.UserDao" %>
 <%@ page contentType="text/html;charset=utf-8" %>
 <!DOCTYPE HTML>
 <html>
@@ -19,8 +21,17 @@
         <h1><a href="index.jsp">SALOTTO</a></h1>
         <nav id="nav">
             <ul>
+                <%
+
+                    User user = (User)session.getAttribute("user");
+
+                    if(user==null){
+                %>
                 <li><a href="Signup.jsp" >注册</a></li>
                 <li><a href="Login.jsp" >登录</a></li>
+                <%}else{%>
+                <li><a href="Set.jsp" >个人中心</a></li>
+                <%}%>
             </ul>
         </nav>
     </header>
@@ -60,6 +71,18 @@
 
     <!-- Main -->
     <section id="main" class="wrapper style2">
+        <div class="navbar-secondary">
+            <nav class="navbar container">
+
+            </nav>
+            <ul class="navbar-subnav">
+                <li class="active"><a href="#">人像</a></li>
+                <li><a href="#">风光</a></li>
+                <li><a href="#">人文</a></li>
+                <li><a href="#">纪实</a></li>
+            </ul>
+        </div>
+
         <div class="container">
 
             <div class="photo_container" style="padding-top: 0px;">
@@ -87,8 +110,8 @@
                 </div></div>
             <div class="clearfix"></div>
             <div class="buttons">
-                <a class="button large submit" data-ga-action="Click Signup" data-ga-category="Homempage Photo Grid" href="/signup">Sign up now</a>
-                <a class="button large tertiary" data-ga-action="Click Discover" data-ga-category="Homepage Photo Grid" href="/popular">Discover more photos</a>
+                <a class="button large submit" data-ga-action="Click Signup" data-ga-category="Homempage Photo Grid" href="Signup.jsp">立即注册</a>
+                <a class="button large tertiary" data-ga-action="Click Discover" data-ga-category="Homepage Photo Grid" href="Pictures.jsp">更多图片</a>
             </div>
         </div>
     </section>
@@ -96,65 +119,65 @@
     <!-- Footer -->
     <footer id="footer">
         <div class="container">
-            <div class="row">
-                <div class="3u 6u(narrow) 12u$(mobilep)">
-                    <h3>Feugiat sed consequat</h3>
-                    <ul class="alt">
-                        <li><a href="#">Phasellus sed scelerisque</a></li>
-                        <li><a href="#">Donec tempus et tortor ultricies</a></li>
-                        <li><a href="#">Eget pellentesque turpis ultrices</a></li>
-                        <li><a href="#">Vestibulum ut nulla vel magna</a></li>
-                        <li><a href="#">Iaculis arcu nulla vel lorem nisl</a></li>
-                        <li><a href="#">Quis ultricies tellus et imperdiet</a></li>
-                    </ul>
-                </div>
-                <div class="3u 6u$(narrow) 12u$(mobilep)">
-                    <h3>Pellentesque et turpis</h3>
-                    <ul class="alt">
-                        <li><a href="#">Phasellus sed scelerisque</a></li>
-                        <li><a href="#">Donec tempus et tortor ultricies</a></li>
-                        <li><a href="#">Eget pellentesque turpis ultrices</a></li>
-                        <li><a href="#">Vestibulum ut nulla vel magna</a></li>
-                        <li><a href="#">Iaculis arcu nulla vel lorem nisl</a></li>
-                        <li><a href="#">Quis ultricies tellus et imperdiet</a></li>
-                    </ul>
-                </div>
-                <div class="6u 12u$(narrow)">
-                    <h3>Malesuada vivamus lacus</h3>
-                    <p>Phasellus dapibus convallis scelerisque. Donec tempus augue id tortor ultricies eget pellentesque turpis ultrices. Vestibulum ut nulla sem, vel iaculis arcu. Nulla vel lorem nisl sed quis ultricies tellus. Nunc laoreet. Nunc imperdiet elit sed dolore lacus venenatis rutrum.</p>
-                    <h3>Tellus nunc dapibus</h3>
-                    <div class="row">
-                        <div class="6u 12u(mobilep)">
-                            <ul class="labeled-icons">
-                                <li>
-                                    <h3 class="icon fa-map-marker"><span class="label">Address</span></h3>
-                                    1234 Somewhere Rd.<br />
-                                    Nashville, TN 00000
-                                </li>
-                                <li>
-                                    <h3 class="icon fa-phone"><span class="label">Phone</span></h3>
-                                    (000) 000-0000
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="6u 12u(mobilep)">
-                            <ul class="labeled-icons">
-                                <li>
-                                    <h3 class="icon fa-envelope"><span class="label">Email</span></h3>
-                                    <a href="#">info@untitled.tld</a>
-                                </li>
-                                <li>
-                                    <h3 class="icon fa-twitter"><span class="label">Twitter</span></h3>
-                                    <a href="#">@untitledcorp-tld</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <%--<div class="row">--%>
+                <%--<div class="3u 6u(narrow) 12u$(mobilep)">--%>
+                    <%--<h3>Feugiat sed consequat</h3>--%>
+                    <%--<ul class="alt">--%>
+                        <%--<li><a href="#">Phasellus sed scelerisque</a></li>--%>
+                        <%--<li><a href="#">Donec tempus et tortor ultricies</a></li>--%>
+                        <%--<li><a href="#">Eget pellentesque turpis ultrices</a></li>--%>
+                        <%--<li><a href="#">Vestibulum ut nulla vel magna</a></li>--%>
+                        <%--<li><a href="#">Iaculis arcu nulla vel lorem nisl</a></li>--%>
+                        <%--<li><a href="#">Quis ultricies tellus et imperdiet</a></li>--%>
+                    <%--</ul>--%>
+                <%--</div>--%>
+                <%--<div class="3u 6u$(narrow) 12u$(mobilep)">--%>
+                    <%--<h3>Pellentesque et turpis</h3>--%>
+                    <%--<ul class="alt">--%>
+                        <%--<li><a href="#">Phasellus sed scelerisque</a></li>--%>
+                        <%--<li><a href="#">Donec tempus et tortor ultricies</a></li>--%>
+                        <%--<li><a href="#">Eget pellentesque turpis ultrices</a></li>--%>
+                        <%--<li><a href="#">Vestibulum ut nulla vel magna</a></li>--%>
+                        <%--<li><a href="#">Iaculis arcu nulla vel lorem nisl</a></li>--%>
+                        <%--<li><a href="#">Quis ultricies tellus et imperdiet</a></li>--%>
+                    <%--</ul>--%>
+                <%--</div>--%>
+                <%--<div class="6u 12u$(narrow)">--%>
+                    <%--<h3>Malesuada vivamus lacus</h3>--%>
+                    <%--<p>Phasellus dapibus convallis scelerisque. Donec tempus augue id tortor ultricies eget pellentesque turpis ultrices. Vestibulum ut nulla sem, vel iaculis arcu. Nulla vel lorem nisl sed quis ultricies tellus. Nunc laoreet. Nunc imperdiet elit sed dolore lacus venenatis rutrum.</p>--%>
+                    <%--<h3>Tellus nunc dapibus</h3>--%>
+                    <%--<div class="row">--%>
+                        <%--<div class="6u 12u(mobilep)">--%>
+                            <%--<ul class="labeled-icons">--%>
+                                <%--<li>--%>
+                                    <%--<h3 class="icon fa-map-marker"><span class="label">Address</span></h3>--%>
+                                    <%--1234 Somewhere Rd.<br />--%>
+                                    <%--Nashville, TN 00000--%>
+                                <%--</li>--%>
+                                <%--<li>--%>
+                                    <%--<h3 class="icon fa-phone"><span class="label">Phone</span></h3>--%>
+                                    <%--(000) 000-0000--%>
+                                <%--</li>--%>
+                            <%--</ul>--%>
+                        <%--</div>--%>
+                        <%--<div class="6u 12u(mobilep)">--%>
+                            <%--<ul class="labeled-icons">--%>
+                                <%--<li>--%>
+                                    <%--<h3 class="icon fa-envelope"><span class="label">Email</span></h3>--%>
+                                    <%--<a href="#">info@untitled.tld</a>--%>
+                                <%--</li>--%>
+                                <%--<li>--%>
+                                    <%--<h3 class="icon fa-twitter"><span class="label">Twitter</span></h3>--%>
+                                    <%--<a href="#">@untitledcorp-tld</a>--%>
+                                <%--</li>--%>
+                            <%--</ul>--%>
+                        <%--</div>--%>
+                    <%--</div>--%>
+                <%--</div>--%>
+            <%--</div>--%>
         </div>
         <div class="copyright">
-            &copy; Untitled. All rights reserved.
+            &copy; PunoLee. All rights reserved.
         </div>
     </footer>
 
