@@ -159,5 +159,22 @@ public class User {
 
     private String ULastname;
     private String UBirthday;
+    private int UFollower;
+    private int UFollowing;
 
+    public int getUFollower() {
+        return UFollower;
+    }
+
+    public void setUFollower(int UFollower) {
+        this.UFollower = UFollower;
+    }
+
+    public int getUFollowing() {
+        return UFollowing;
+    }
+
+    public void setUFollowing(int UFollowing) {
+        this.UFollowing = UFollowing;
+    }
 }
