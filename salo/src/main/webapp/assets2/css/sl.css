@@ -1,6 +1,25 @@
-#header .main ul li > a {
-    text-indent: 0;
-    font-size: 0.7em;
-    margin-left: 10px;
-    margin-right: 30px;
+/*#header .main ul li > a {*/
+    /*text-indent: 0;*/
+    /*font-size: 0.7em;*/
+    /*margin-left: 10px;*/
+    /*margin-right: 30px;*/
+/*}*/
+.button.login{
+    font-size: 11px !important;
+}
+.col.d6x5.clearafter{
+    width: 900px !important;
+}
+.controlgroup.d12x5.g1.margin.comment{
+    width: 900px !important;
+
+}
+.button.comment{
+    font-size: 10px;
+}
+.signupbtn{
+    text-indent: 0 !important;
+    font-size: 0.7em !important;
+    margin-left: 10px !important;
+    margin-right: 30px !important;
 }
