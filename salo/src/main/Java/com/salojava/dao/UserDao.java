@@ -147,6 +147,61 @@ public class UserDao {
                 user.setUFirstname(rs.getString("uFirstname"));
                 user.setULastname(rs.getString("uLastname"));
                 user.setUBirthday(rs.getString("uBirthday"));
+                user.setUFollower(rs.getInt("uFollower"));
+                user.setUFollowing(rs.getInt("uFollowing"));
+
+            }
+            // 释放此 ResultSet 对象的数据库和 JDBC 资源
+            rs.close();
+            // 释放此 PreparedStatement 对象的数据库和 JDBC 资源
+            ps.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }finally{
+            // 关闭数据库连接
+            ConnectDB.closeConnection(conn);
+        }
+        return user;
+    }
+    /**
+     * 查找author的数据
+     * @param uID uID
+     * @return 用户对象
+     */
+    public User findbyID(int uID){
+        User user = null;
+        Connection conn = (Connection) ConnectDB.getConnection();
+        String sql = "select * from users where uID = ? ";
+        try {
+            // 获取PreparedStatement对象
+            PreparedStatement ps = conn.prepareStatement(sql);
+            // 对SQL语句的占位符参数进行动态赋值
+            ps.setInt(1, uID);
+            // 执行查询获取结果集
+            ResultSet rs = ps.executeQuery();
+            // 判断结果集是否有效
+            if(rs.next()){
+                // 实例化一个用户对象
+                user = new User();
+                // 对用户对象属性赋值
+                user.setUId(rs.getInt("uID"));
+                user.setUName(rs.getString("uName"));
+                user.setUPhoto(rs.getString("uPhoto"));
+                user.setUPassword(rs.getString("uPwd"));
+                user.setUMail(rs.getString("uMail"));
+                user.setUDescribe(rs.getString("uDescribe"));
+                user.setUGender(rs.getInt("uGender"));
+                user.setUAddArea(rs.getString("uAddArea"));
+                user.setUAddCity(rs.getString("uAddCity"));
+                user.setUAddCountry(rs.getString("uAddCountry"));
+                user.setUCamera(rs.getString("uCamera"));
+                user.setULens(rs.getString("uLens"));
+                user.setUMisc(rs.getString("uMisc"));
+                user.setUFirstname(rs.getString("uFirstname"));
+                user.setULastname(rs.getString("uLastname"));
+                user.setUBirthday(rs.getString("uBirthday"));
+                user.setUFollower(rs.getInt("uFollower"));
+                user.setUFollowing(rs.getInt("uFollowing"));
 
             }
             // 释放此 ResultSet 对象的数据库和 JDBC 资源
