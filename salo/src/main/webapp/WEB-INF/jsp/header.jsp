@@ -87,6 +87,7 @@
 
     </ul>
   </section>
+  <%if(user!=null){%>
   <section>
     <ul class="links">
       <li>
@@ -110,6 +111,7 @@
 
     </ul>
   </section>
+  <%}%>
   <section>
     <ul class="links">
       <li>
