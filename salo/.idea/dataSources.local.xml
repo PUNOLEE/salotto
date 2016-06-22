@@ -7,5 +7,11 @@
       <schema-pattern>salotto.*</schema-pattern>
       <default-schemas>Company.*</default-schemas>
     </data-source>
+    <data-source name="MySQL - salotto@cray" uuid="8a1c1308-d461-4201-80bc-5220a7b6bf21">
+      <secret-storage>master_key</secret-storage>
+      <user-name>cyx</user-name>
+      <schema-pattern>salotto.*</schema-pattern>
+      <default-schemas>look-up.*</default-schemas>
+    </data-source>
   </component>
 </project>
