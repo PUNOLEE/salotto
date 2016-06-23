@@ -48,7 +48,6 @@
       <div class="postx">
 <%
     String type=(String)request.getAttribute("type");
-    System.out.println("type:"+type);
     PortfolioDao pfd=new PortfolioDao();
     List<Portfolio> p=new ArrayList();
   p=pfd.query(type);
@@ -58,16 +57,13 @@
     author=authordao.findbyID(a.getUID());
     PortfolioPhotosDao photos=new PortfolioPhotosDao();
     List<Object[]> photoName=new ArrayList();
-    System.out.println(a.getPfID());
     photoName=photos.findPhotos(a.getPfID());
     String[] pn=new String[photoName.size()];
 
-    System.out.println(photoName.size());
     for(int i=0;i<photoName.size();i++) {
       pn[i] = String.valueOf(photoName.get(i));
       StringUtils stringUtils = null;
       pn[i] = stringUtils.substringBetween(pn[i], "=", "}");
-      System.out.println(pn[i]);
     }
 //    if(type.equals("0")){
 //      p=pfd.postPortfolio();}

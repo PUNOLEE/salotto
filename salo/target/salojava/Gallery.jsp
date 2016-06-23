@@ -71,7 +71,6 @@
         pn[i] = String.valueOf(p.get(i));
         StringUtils stringUtils = null;
         pn[i] = stringUtils.substringBetween(pn[i], "=", "}");
-        System.out.println(pn[i]);
       }
       for(int j=0;j<pn.length;j++){
         PortfolioPhotosDao photos=new PortfolioPhotosDao();

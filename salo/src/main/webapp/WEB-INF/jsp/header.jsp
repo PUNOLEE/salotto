@@ -23,7 +23,7 @@
       <li><a href="Pictures.jsp?type=0">图</a></li>
       <li><a href="#">活动</a></li>
       <li><a href="News.jsp">资讯</a></li>
-      <li><a href="#">论坛</a></li>
+      <li><a href="/salotto/BMain?pageNumber=1">论坛</a></li>
       <li><a href="#">红娘</a></li>
     </ul>
   </nav>
