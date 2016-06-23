@@ -4,7 +4,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Untitled</title>
+    <title>SALOTTO</title>
     <meta http-equiv="Content-Type" contentType="text/html;charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -90,28 +90,31 @@
 
                     <div class="">
                         <div class="irow">
-                            <a href="view.html" class="image featured" id="ifx"><img src="images/pic04.jpg" alt="" /></a>
-                            <a href="view.html" class="image featured" id="ifx"><img src="images/pic04.jpg" alt="" /></a>
-                            <a href="view.html" class="image featured" id="ifx"><img src="images/pic04.jpg" alt="" /></a>
+                            <a href="view.html" class="image featured" id="ifx"><img src="images/pic01.jpg" alt="" /></a>
+                            <a href="view.html" class="image featured" id="ifx"><img src="images/pic02.jpg" alt="" /></a>
+                            <a href="view.html" class="image featured" id="ifx"><img src="images/pic03.jpg" alt="" /></a>
+                            <a href="view.html" class="image featured" id="ifx"><img src="images/pic10.jpg" alt="" /></a>
+
                         </div>
 
                         <div class="x">
-                            <a href="view.html" class="image featured" id="ifx2"><img src="images/pic03.jpg" alt="" /></a>
-                            <a href="view.html" class="image featured" id="ifx2"><img src="images/pic03.jpg" alt="" /></a>
+                            <a href="view.html" class="image featured" id="ifx2"><img src="images/pic04.jpg" alt="" /></a>
+                            <a href="view.html" class="image featured" id="ifx2"><img src="images/pic05.jpg" alt="" /></a>
 
                             <!-- <div class="z">
                             <a href="view.html" class="image featured" id="ifx3"></a></div> --></div>
                         <div class="z">
-                            <a href="view.html" class="image featured" id="ifx"><img src="images/pic02.jpg" alt="" /></a>
-                            <a href="view.html" class="image featured" id="ifx"><img src="images/pic04.jpg" alt="" /></a>
-                            <a href="view.html" class="image featured" id="ifx"><img src="images/pic02.jpg" alt="" /></a>
+                            <a href="view.html" class="image featured" id="ifx"><img src="images/pic06.jpg" alt="" /></a>
+                            <a href="view.html" class="image featured" id="ifx"><img src="images/pic07.jpg" alt="" /></a>
+                            <a href="view.html" class="image featured" id="ifx"><img src="images/pic11.jpg" alt="" /></a>
+
                         </div>
                     </div>
                 </div></div>
             <div class="clearfix"></div>
             <div class="buttons">
                 <a class="button large submit" data-ga-action="Click Signup" data-ga-category="Homempage Photo Grid" href="Signup.jsp">立即注册</a>
-                <a class="button large tertiary" data-ga-action="Click Discover" data-ga-category="Homepage Photo Grid" href="Pictures.jsp">更多图片</a>
+                <a class="button large tertiary" data-ga-action="Click Discover" data-ga-category="Homepage Photo Grid" href="Pictures.jsp?type=0">更多图片</a>
             </div>
         </div>
     </section>
@@ -119,62 +122,7 @@
     <!-- Footer -->
     <footer id="footer">
         <div class="container">
-            <%--<div class="row">--%>
-                <%--<div class="3u 6u(narrow) 12u$(mobilep)">--%>
-                    <%--<h3>Feugiat sed consequat</h3>--%>
-                    <%--<ul class="alt">--%>
-                        <%--<li><a href="#">Phasellus sed scelerisque</a></li>--%>
-                        <%--<li><a href="#">Donec tempus et tortor ultricies</a></li>--%>
-                        <%--<li><a href="#">Eget pellentesque turpis ultrices</a></li>--%>
-                        <%--<li><a href="#">Vestibulum ut nulla vel magna</a></li>--%>
-                        <%--<li><a href="#">Iaculis arcu nulla vel lorem nisl</a></li>--%>
-                        <%--<li><a href="#">Quis ultricies tellus et imperdiet</a></li>--%>
-                    <%--</ul>--%>
-                <%--</div>--%>
-                <%--<div class="3u 6u$(narrow) 12u$(mobilep)">--%>
-                    <%--<h3>Pellentesque et turpis</h3>--%>
-                    <%--<ul class="alt">--%>
-                        <%--<li><a href="#">Phasellus sed scelerisque</a></li>--%>
-                        <%--<li><a href="#">Donec tempus et tortor ultricies</a></li>--%>
-                        <%--<li><a href="#">Eget pellentesque turpis ultrices</a></li>--%>
-                        <%--<li><a href="#">Vestibulum ut nulla vel magna</a></li>--%>
-                        <%--<li><a href="#">Iaculis arcu nulla vel lorem nisl</a></li>--%>
-                        <%--<li><a href="#">Quis ultricies tellus et imperdiet</a></li>--%>
-                    <%--</ul>--%>
-                <%--</div>--%>
-                <%--<div class="6u 12u$(narrow)">--%>
-                    <%--<h3>Malesuada vivamus lacus</h3>--%>
-                    <%--<p>Phasellus dapibus convallis scelerisque. Donec tempus augue id tortor ultricies eget pellentesque turpis ultrices. Vestibulum ut nulla sem, vel iaculis arcu. Nulla vel lorem nisl sed quis ultricies tellus. Nunc laoreet. Nunc imperdiet elit sed dolore lacus venenatis rutrum.</p>--%>
-                    <%--<h3>Tellus nunc dapibus</h3>--%>
-                    <%--<div class="row">--%>
-                        <%--<div class="6u 12u(mobilep)">--%>
-                            <%--<ul class="labeled-icons">--%>
-                                <%--<li>--%>
-                                    <%--<h3 class="icon fa-map-marker"><span class="label">Address</span></h3>--%>
-                                    <%--1234 Somewhere Rd.<br />--%>
-                                    <%--Nashville, TN 00000--%>
-                                <%--</li>--%>
-                                <%--<li>--%>
-                                    <%--<h3 class="icon fa-phone"><span class="label">Phone</span></h3>--%>
-                                    <%--(000) 000-0000--%>
-                                <%--</li>--%>
-                            <%--</ul>--%>
-                        <%--</div>--%>
-                        <%--<div class="6u 12u(mobilep)">--%>
-                            <%--<ul class="labeled-icons">--%>
-                                <%--<li>--%>
-                                    <%--<h3 class="icon fa-envelope"><span class="label">Email</span></h3>--%>
-                                    <%--<a href="#">info@untitled.tld</a>--%>
-                                <%--</li>--%>
-                                <%--<li>--%>
-                                    <%--<h3 class="icon fa-twitter"><span class="label">Twitter</span></h3>--%>
-                                    <%--<a href="#">@untitledcorp-tld</a>--%>
-                                <%--</li>--%>
-                            <%--</ul>--%>
-                        <%--</div>--%>
-                    <%--</div>--%>
-                <%--</div>--%>
-            <%--</div>--%>
+
         </div>
         <div class="copyright">
             &copy; PunoLee. All rights reserved.

@@ -13,11 +13,8 @@
   <title>设置</title>
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!--[if lte IE 8]><script src="assets2/js/ie/html5shiv.js"></script><![endif]-->
-  <link rel="stylesheet" href="assets2/css/main.css" />
+  <%@include file="WEB-INF/jsp/jss.jsp"%>
   <link rel="stylesheet" href="assets2/css/pop.css" />
-  <!--[if lte IE 9]><link rel="stylesheet" href="assets2/css/ie9.css" /><![endif]-->
-  <!--[if lte IE 8]><link rel="stylesheet" href="assets2/css/ie8.css" /><![endif]-->
 </head>
 
 <body >
@@ -28,9 +25,9 @@
   <center>
     <div class="navbar-secondary">
       <ul class="navbar-subnav">
-        <li class="active"><a href="#">设置</a></li>
-        <li><a href="#">我的好友</a></li>
-        <li><a href="#">相册</a></li>
+        <li class="active"><a href="Set.jsp">设置</a></li>
+        <li><a href="Friend.jsp">我的好友</a></li>
+        <li><a href="Gallery.jsp">相册</a></li>
       </ul>
     </div></center>
   <!-- Main -->
@@ -43,7 +40,7 @@
           </li>
           <li><a href="" class="setstyle set2">通知</a></li>
           <li><a href="" class="setstyle set2">我的收藏</a></li>
-          <li><a href="Comment.jsp" class="setstyle set2">我的评论</a></li>
+          <li><a href="Comment.jsp" class="setstyle set2">我的消息</a></li>
         </ul>
       </div>
       <div class="col d6x5 clearafter">
@@ -231,12 +228,6 @@
 
   }
 </script>
-<!-- Scripts -->
-<script src="assets2/js/jquery.min.js"></script>
-<script src="assets2/js/skel.min.js"></script>
-<script src="assets2/js/util.js"></script>
-<!--[if lte IE 8]><script src="assets2/js/ie/respond.min.js"></script><![endif]-->
-<script src="assets2/js/main.js"></script>
 
 </body>
 </html>

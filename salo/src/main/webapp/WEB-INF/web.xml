@@ -25,6 +25,7 @@
         </init-param>
 
     </servlet>
+
     <servlet>
         <servlet-name>EditServlet</servlet-name>
         <servlet-class>com.salojava.servlet.EditServlet</servlet-class>
@@ -48,6 +49,10 @@
             <param-name>password</param-name>
             <param-value>root</param-value>
         </init-param>
+    </servlet>
+    <servlet>
+        <servlet-name>PageLocationServlet</servlet-name>
+        <servlet-class>com.salojava.servlet.PageLocationServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>uploadProcessorServlet</servlet-name>
@@ -76,6 +81,10 @@
     <servlet-mapping>
         <servlet-name>SearchServlet</servlet-name>
         <url-pattern>/Search</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PageLocationServlet</servlet-name>
+        <url-pattern>/Location</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>DeleteServlet</servlet-name>

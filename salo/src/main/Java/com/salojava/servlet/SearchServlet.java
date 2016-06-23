@@ -30,7 +30,6 @@ public class SearchServlet extends HttpServlet {
             tid+=ids[i]+";";
 
         }
-        System.out.println(tid);
         request.setAttribute("type",tid);
         request.getRequestDispatcher("SearchResult.jsp").forward(request, response);
     }

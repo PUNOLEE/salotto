@@ -13,16 +13,30 @@ import java.util.Map;
  */
 public class PortfolioDao {
 //        public static void main(String args[]) {
-//            List<Object[]> p=findUserPhotos(4);
+//            List<Portfolio> p=postPortfolio(1);
 //
-//            String[] pn=new String[p.size()];
-//            for(int i=0;i<p.size();i++){
-//                pn[i]=String.valueOf(p.get(i));
-//                System.out.println(p.get(i));
-//            }
+//           for(Portfolio a:p){
+//               System.out.println(a.getPfID());
+//           }
 //
 //        }
+private static Connection conn;
+    private static ResultSet resultset;
+    private static Statement statement;
+    private static int pagesize = 11;
+    static {
+        conn = (Connection) ConnectDB.getConnection();
+    }
+    public static ResultSet ExecuteQuery(String sql) {
+        try {
+            statement = conn.createStatement();
+            resultset = statement.executeQuery(sql);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 
+        return resultset;
+    }
     public int savePortfolioUID(Portfolio pf){
         // 获取数据库连接Connection对象
         Connection conn = (Connection) ConnectDB.getConnection();
@@ -123,13 +137,15 @@ public class PortfolioDao {
         }
         return portfolio;
     }
-    public  List<Portfolio> postPortfolio(){
+    public    List<Portfolio> postPortfolio(int pageNum){
         List<Portfolio> pf=new ArrayList();
         Portfolio p=null;
         Connection conn = (Connection) ConnectDB.getConnection();
-        String sql="{call time_sort()}";
+        String sql="{call time_sort(?,?)}";
         try{
             CallableStatement ps = conn.prepareCall(sql);
+            ps.setInt(1,(pageNum-1)*pagesize);
+            ps.setInt(2,pagesize);
             ResultSet rs=ps.executeQuery();
             pf=convertList(rs);
             rs.close();
@@ -144,14 +160,16 @@ public class PortfolioDao {
         return pf;
 
     }
-    public  List<Portfolio> postPortfolio(String tags){
+    public  List<Portfolio> postPortfolio(String tags,int pageNum){
         List<Portfolio> pf=new ArrayList();
         Portfolio p=null;
         Connection conn = (Connection) ConnectDB.getConnection();
-        String sql="{call Likes_sort(?)}";
+        String sql="{call Likes_sort(?,?,?)}";
         try{
             CallableStatement ps = conn.prepareCall(sql);
             ps.setString(1,tags);
+            ps.setInt(2, (pageNum-1)*pagesize);
+            ps.setInt(3,pagesize);
             ResultSet rs=ps.executeQuery();
             pf=convertList(rs);
             rs.close();
@@ -165,6 +183,32 @@ public class PortfolioDao {
         }
         return pf;
 
+    }
+    public static int getPageCount() {
+        int total = 0; // 总记录数
+        int PageCount = 0; // 页码总数
+        resultset = ExecuteQuery("select count(*) from portfolio");
+        try {
+            if (resultset.next()) {
+                total = resultset.getInt(1);
+                PageCount = (total - 1) / pagesize + 1;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return PageCount;
+    }
+    public static int getTotalPage() {
+        int total = 0; // 总记录数
+        resultset = ExecuteQuery("select count(*) from portfolio");
+        try {
+            if (resultset.next()) {
+                total = resultset.getInt(1);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return total;
     }
     public  List<Object[]> findUserPhotos(int uID){
         List<Object[]> photoList=new ArrayList();

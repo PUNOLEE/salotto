@@ -94,9 +94,9 @@ public class UploadProcessorServlet extends HttpServlet {
                     String picUrl = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + request.getContextPath() + "/upload/" + saveName;
 
 
-                    System.out.println("存放目录:" + PATH_FOLDER);
-                    System.out.println("文件名:" + filename);
-                    System.out.println("浏览器访问路径:" + picUrl);
+//                    System.out.println("存放目录:" + PATH_FOLDER);
+//                    System.out.println("文件名:" + filename);
+//                    System.out.println("浏览器访问路径:" + picUrl);
 
                     // 真正写到磁盘上
                     item.write(new File(PATH_FOLDER, saveName)); // 第三方提供的
@@ -133,18 +133,15 @@ public class UploadProcessorServlet extends HttpServlet {
                 //获取用户具体输入的字符串 ，名字起得挺好，因为表单提交过来的是 字符串类型的
                 if (fileItem.getFieldName().equals("username")) {
                     uID = Integer.parseInt(fileItem.getString());
-                    System.out.println(uID);
                 }
                 if (fileItem.getFieldName().equals("portfolioID")) {
                     if(fileItem.getString().equals("")){PFID=0;}
                     else{
                     PFID = Integer.parseInt(fileItem.getString());
-                    System.out.println(PFID);}
+                    }
                     if(PFID==0){
-                        System.out.println(uID);
                         pf.setUID(uID);
                         PFID = pfdao.savePortfolioUID(pf);
-                        System.out.println(PFID);
 
                     }
                 }
@@ -184,24 +181,19 @@ public class UploadProcessorServlet extends HttpServlet {
             for (int i = 0; i < iSize; i++) {
                 JSONObject jsonObj = jsonArray.getJSONObject(i);
                 tagsvalue+=jsonObj.get("tags").toString()+";";
-                System.out.println("[" + i + "]tags=" + jsonObj.get("tags"));
 
             }
-            System.out.println(tagsvalue);
             String[] tag=tagsvalue.split("\\;");
             String tgss="";
             for (int i = 0 ; i <tag.length ; i++ ) {
-                System.out.println("--" + tag[i]);
                 TagsDao tgd=new TagsDao();
                 tgss+=tgd.findTags(tag[i])+";";
             }
-            System.out.println(tgss);
             pf.setUID(uID);
             pf.setPfTitle(title);
             pf.setPfDescribe(about);
             pf.setPfTags(tgss);
             PFID = pfdao.savePortfolioUID(pf);
-            System.out.println(PFID);
             JSONObject jsonObject = new JSONObject();
             jsonObject.put("pfid",PFID);
             response.setContentType("application/json");

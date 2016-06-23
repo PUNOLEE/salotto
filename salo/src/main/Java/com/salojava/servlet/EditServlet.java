@@ -97,7 +97,6 @@ public class EditServlet extends HttpServlet {
                         }
 
 
-                        System.out.println("表单的参数名称：" + item.getFieldName() + ",表单的参数值：" + item.getString("UTF-8"));
                     } else {
 
                         if (item.getName() != null && !item.getName().equals("")) {
@@ -105,7 +104,6 @@ public class EditServlet extends HttpServlet {
                             File tempFile = new File(item.getName());//getName得到的文件名称包含了它在客户端的路径
                             File file = new File(sc.getRealPath("/") + savePath, tempFile.getName());
                             item.write(file);//将上传的文件写入到file中
-                            System.out.println(photo);
                         }
 
                     }

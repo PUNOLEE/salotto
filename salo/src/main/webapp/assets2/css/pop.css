@@ -422,12 +422,47 @@ body .alignright {
 .controlgroup.d12x5.g1.margin.comment{
     width: 850px;
 }
+.controlgroup.d12x5.g1.margin.friend{
+    width: 1000px;
+    margin: 0 auto;
+}
+.col.d6x5.clearafter.friend{
+    margin: 0 auto;
+    /* text-align: center; */
+    margin-left: 6em;
+    margin-right: 2em;
+}
+.checkinfo.friend{
+    width: 410px;
+    border: 1px solid #ccc;
+    margin-left: 13px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
 .checkinfo.comment{
     width: 840px;
     border: 1px solid #ccc;
     margin-left: 13px;
     padding: 10px;
     margin-bottom: 20px;
+}
+.fx{
+    margin-left: 9em;
+}
+.xxfriend{
+    height: 5em;
+    border:solid 1px rgba(160, 160, 160, 0.3);
+    width: 250px;
+    padding: 10px;
+}
+.deletef{
+    position: absolute;
+    right: 2.5em;
+    /* margin-right: 0px; */
+    /* top: 1em; */
+    border-bottom: none;
+    font-size: 1.2em;
+    margin-top: -15px;
 }
 .xxcomment{
     height: 5em;

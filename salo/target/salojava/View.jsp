@@ -23,13 +23,9 @@
   <title>浏览</title>
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!--[if lte IE 8]><script src="assets2/js/ie/html5shiv.js"></script><![endif]-->
-  <link rel="stylesheet" href="assets2/css/main.css" />
+  <%@include file="WEB-INF/jsp/jss.jsp"%>
   <link rel="stylesheet" href="assets2/css/light.css" />
 
-  <!--[if lte IE 9]><link rel="stylesheet" href="assets2/css/ie9.css" /><![endif]-->
-  <!--[if lte IE 8]><link rel="stylesheet" href="assets2/css/ie8.css" /><![endif]-->
-  <script src="assets2/js/jquery.min.js"></script>
   <script src="assets2/js/light/jquery.poptrox.min.js"></script>
   <script language="javascript">
 
@@ -107,7 +103,7 @@
           <input type="text" style="display: none" id="LikesuID" value="<%=user.getUId()%>">
           <input type="text" style="display: none" id="authorID" value="<%=author.getUId()%>">
           <a href="" class="cheader"><h2><%=portfolio.getPfTitle()%></h2></a>
-          <span> Photo by <%=author.getUName()%></span>
+          <span> Photo by <a href="Account.jsp?uID=<%=author.getUId()%>" style="border-bottom: none !important;"><%=author.getUName()%></a></span>
           <ul >
             <li><a href="#" class="icon fa-camera"><span class="label"></span></a><%=author.getUCamera()%></li>
             <li><a href="#" class="icon fa-circle"><span class="label"></span></a> <%=author.getULens()%></li>
@@ -152,7 +148,7 @@
           <form >
 
             <div class="field half first">
-              <a href="#" >
+              <a href="Account.jsp?uID=<%=user.getUId()%>" >
                 <div class="author" id="account"><img src="uploads/<%=user.getUPhoto()%>" alt="" /></div>
                 <h3 class="bar2"><%=user.getUName()%></h3>
 
@@ -241,10 +237,7 @@
 
   }
 </script>
-<script src="assets2/js/skel.min.js"></script>
-<script src="assets2/js/util.js"></script>
-<script src="assets2/js/main.js"></script>
-<!--[if lte IE 8]><script src="assets2/js/ie/respond.min.js"></script><![endif]-->
+
 <script src="assets2/js/light/main.js"></script>
 
 </body>

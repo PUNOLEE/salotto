@@ -25,7 +25,6 @@ public class DeleteServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Connection conn = (Connection) ConnectDB.getConnection();
        int pfcid=Integer.parseInt(request.getParameter("pfCID"));
-        System.out.println(pfcid);
         try {
             PreparedStatement ps = conn.prepareStatement("delete from portfolioComments where pfCommentsID=?");
             ps.setInt(1, pfcid);

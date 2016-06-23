@@ -15,7 +15,7 @@ import org.apache.commons.lang.StringUtils;
  */
 public class PortfolioPhotosDao {
 //    public static void main(String args[]) {
-//        List<Object[]> a=findPhotos(118);
+//        List<Object[]> a=findPhotos(10000000);
 //
 //        String[] pn=new String[a.size()];
 //        for(int i=0;i<a.size();i++){

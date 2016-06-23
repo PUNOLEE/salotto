@@ -1,41 +1,45 @@
 .irow{
-	height: 265px;
+	width:1200px;
 }
 .irow > a >img{
-	height: 265px;
+	height: 305px;
 }
 .x{
-	height: 383px;
+	width: 1200px;
 }
 .x > a > img{
-	height: 383px;
+	width: 595px;
 }
 .z{
-	height: 413px;
+	width: 1200px;
 }
 .z > a > img{
-	height: 413px;
+	height: 418px;
 
 }
 @media screen and (max-width: 1280px){
 .irow{
-	height: 210px;
+	width:900px;
 }
 .irow > a >img{
-	height: 210px;
+	height: 230px;
 }
 .x{
-	height: 304px;
+	width:900px;
 }
 .x > a > img{
-	height: 304px;
+	height: 300px;
+	width: auto;
 }
 .z{
-	height: 330px;
+	width:auto;
 }
 .z > a > img{
-	height: 330px;
+	height: 313px;
 
+}
+footer > p{
+	margin: -1.5em !important;
 }
 }
 @media screen and (min-width: 1680px)

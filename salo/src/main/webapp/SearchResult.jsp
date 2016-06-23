@@ -18,13 +18,11 @@
   <title>查询结果</title>
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!--[if lte IE 8]><script src="assets2/js/ie/html5shiv.js"></script><![endif]-->
-  <link rel="stylesheet" href="assets2/css/main.css" />
+  <%@include file="WEB-INF/jsp/jss.jsp"%>
+
   <link rel="stylesheet" href="assets2/css/pop.css" />
   <link rel="stylesheet" href="assets2/css/search.css" />
 
-  <!--[if lte IE 9]><link rel="stylesheet" href="assets2/css/ie9.css" /><![endif]-->
-  <!--[if lte IE 8]><link rel="stylesheet" href="assets2/css/ie8.css" /><![endif]-->
 </head>
 
 <body >
@@ -50,7 +48,6 @@
       <div class="postx">
 <%
     String type=(String)request.getAttribute("type");
-    System.out.println("type:"+type);
     PortfolioDao pfd=new PortfolioDao();
     List<Portfolio> p=new ArrayList();
   p=pfd.query(type);
@@ -60,16 +57,13 @@
     author=authordao.findbyID(a.getUID());
     PortfolioPhotosDao photos=new PortfolioPhotosDao();
     List<Object[]> photoName=new ArrayList();
-    System.out.println(a.getPfID());
     photoName=photos.findPhotos(a.getPfID());
     String[] pn=new String[photoName.size()];
 
-    System.out.println(photoName.size());
     for(int i=0;i<photoName.size();i++) {
       pn[i] = String.valueOf(photoName.get(i));
       StringUtils stringUtils = null;
       pn[i] = stringUtils.substringBetween(pn[i], "=", "}");
-      System.out.println(pn[i]);
     }
 //    if(type.equals("0")){
 //      p=pfd.postPortfolio();}
@@ -145,12 +139,7 @@
 
 </div>
 
-<!-- Scripts -->
-<script src="assets2/js/jquery.min.js"></script>
-<script src="assets2/js/skel.min.js"></script>
-<script src="assets2/js/util.js"></script>
-<!--[if lte IE 8]><script src="assets2/js/ie/respond.min.js"></script><![endif]-->
-<script src="assets2/js/main.js"></script>
+
 
 </body>
 </html>

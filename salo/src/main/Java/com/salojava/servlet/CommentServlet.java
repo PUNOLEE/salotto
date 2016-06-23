@@ -22,7 +22,6 @@ public class CommentServlet extends HttpServlet {
         int pfid=0;
         String Content=request.getParameter("message");
         int authorid=Integer.parseInt(request.getParameter("authorID"));
-        System.out.println(Content);
         portfolioCommentsDao pfcd=new portfolioCommentsDao();
         portfolioComments pfc=new portfolioComments();
 

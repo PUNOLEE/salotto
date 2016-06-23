@@ -37,7 +37,7 @@
         if(user!=null){
       %>
       <li class="search">
-        <a class="fa-search" href="#search">Search</a>
+        <a class="fa-search" href="#search">标签搜索</a>
         <form id="search" method="post" action="Search">
           <input type="text" name="query" placeholder="Search" />
         </form>
@@ -103,7 +103,7 @@
         </a>
       </li>
       <li>
-        <a href="#">
+        <a href="Friend.jsp">
           <h3>我的好友</h3>
 
         </a>

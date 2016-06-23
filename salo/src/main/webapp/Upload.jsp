@@ -16,46 +16,12 @@
   <title>上传</title>
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!--[if lte IE 8]><script src="assets2/js/ie/html5shiv.js"></script><![endif]-->
-  <link rel="stylesheet" href="assets2/css/main.css" />
+  <%@include file="WEB-INF/jsp/jss.jsp"%>
   <link rel="stylesheet" href="assets2/css/pop.css" />
   <link rel="stylesheet" href="assets2/css/tag.css" />
   <link rel="stylesheet" href="assets2/css/bootstrap.min.css" />
   <link href="assets2/css/fileinput.css" media="all" rel="stylesheet" type="text/css" />
-  <script src="assets2/js/jquery.min.js"></script>
-  <!--[if lte IE 9]><link rel="stylesheet" href="assets2/css/ie9.css" /><![endif]-->
-  <!--[if lte IE 8]><link rel="stylesheet" href="assets2/css/ie8.css" /><![endif]-->
-    <%--<script type="text/javascript" src="assets2/js/ajaxfileupload.js"></script>--%>
-  <%--<script type="text/javascript">--%>
-    <%--function ajaxFileUpload() {--%>
-      <%--$.ajaxFileUpload({--%>
-        <%--url : 'upload',--%>
-        <%--secureuri : false,--%>
-        <%--type:"post",--%>
-        <%--fileElementId : 'fileToUpload',--%>
-        <%--dataType:"json",--%>
-        <%--contentType: "application/json; charset=utf-8",--%>
-        <%--data : {username : $("#username").val(),portfolioID:$("#portfolioID").val()},--%>
-        <%--success : function(data,status) {--%>
-          <%--alert("成功！");--%>
-          <%--console.log("成功");--%>
-          <%--console.log(data);--%>
-          <%--console.log(data.pfid);--%>
-          <%--$('#portfolioID').attr('value',data.pfid);--%>
-        <%--},--%>
-        <%--error : function(data, status, e) {--%>
-          <%--if(status=='timeout'){//超时,status还有success,error等值的情况--%>
 
-            <%--ajaxTimeOut.abort(); //取消请求--%>
-            <%--alert("超时");--%>
-
-          <%--}--%>
-          <%--alert('上传出错');--%>
-        <%--}--%>
-
-      <%--});--%>
-    <%--}--%>
-  <%--</script>--%>
 </head>
 
 <body >
@@ -413,10 +379,6 @@
 
         <!-- Scripts -->
 
-        <script src="assets2/js/skel.min.js"></script>
-        <script src="assets2/js/util.js"></script>
-        <!--[if lte IE 8]><script src="assets2/js/ie/respond.min.js"></script><![endif]-->
-        <script src="assets2/js/main.js"></script>
         <script src="assets2/js/upload/fileinput.js" type="text/javascript"></script>
         <script src="assets2/js/upload/fileinput_locale_zh.js" type="text/javascript"></script>
         <script type="text/javascript">
@@ -491,40 +453,5 @@
 
 </script>
 
-        <%--<script type="text/javascript">--%>
-          <%--var upimg = document.querySelector('#fileToUpload');--%>
-          <%--upimg.addEventListener('change', function(e){--%>
-            <%--var files = this.files;--%>
-            <%--if(files.length){--%>
-              <%--// 对文件进行处理，下面会讲解checkFile()会做什么--%>
-              <%--checkFile(this.files);--%>
-            <%--}--%>
-          <%--});--%>
-          <%--function checkFile(files){--%>
-            <%--var html='', i=0;--%>
-            <%--var func = function(){--%>
-              <%--if(i>=files.length){--%>
-                <%--// 若已经读取完毕，则把html添加页面中--%>
-                <%--show.innerHTML = html;--%>
-              <%--}--%>
-              <%--var file = files[i];--%>
-              <%--var reader = new FileReader();--%>
-
-              <%--// show表示<div id='show'></div>，用来展示图片预览的--%>
-              <%--if(!/image\/\w+/.test(file.type)){--%>
-                <%--show.innerHTML = "请确保文件为图像类型";--%>
-                <%--return false;--%>
-              <%--}--%>
-              <%--reader.onload = function(e){--%>
-                <%--html += '<img style="width:300px" src="'+e.target.result+'" alt="img">';--%>
-                <%--i++;--%>
-                <%--func(); //选取下一张图片--%>
-              <%--}--%>
-              <%--reader.readAsDataURL(file);--%>
-            <%--}--%>
-            <%--func();--%>
-          <%--}--%>
-
-        <%--</script>--%>
 </body>
         </html>

@@ -33,6 +33,11 @@
   <link rel="stylesheet" href="assets2/css/ie8.css" />
   <![endif]-->
   <script src="assets2/js/jquery.min.js"></script>
+  <style type="text/css">
+    #header #search.visible {
+      padding: 0.5em 0.5em 0 0;
+    }
+  </style>
   <script language="javascript">
 
     function styleChange(s) {
@@ -164,7 +169,7 @@
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="Friend.jsp">
             <h3>我的好友</h3>
 
           </a>
@@ -200,7 +205,7 @@
   </section>
 
 </div>
-<div>
+<div class="myaccount">
   <%
     UserDao authorDao=new UserDao();
     User author=new User();
@@ -339,10 +344,7 @@
     <%}%>
     <ul class="details" >
       <li class="affection">
-        <div>
-          <span>0</span>
-          Affection
-        </div>
+
       </li>
       <li class="views">
         <div>

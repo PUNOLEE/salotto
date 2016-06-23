@@ -2844,7 +2844,9 @@
 	@media screen and (max-width: 1280px) {
 
 		/* Header */
-
+		.myaccount{
+			margin-top: -4em !important;
+		}
 			#header {
 				padding: 6em 3em 3em 3em;
 				width: 30%;
@@ -2887,7 +2889,9 @@
 /* Medium */
 
 	@media screen and (max-width: 980px) {
-
+		.myaccount{
+			margin-top: -4em !important;
+		}
 		/* Basic */
 
 			h1 br, h2 br, h3 br, h4 br, h5 br, h6 br {
@@ -2968,7 +2972,9 @@
 /* Small */
 
 	@media screen and (max-width: 736px) {
-
+		.myaccount{
+			margin-top: -4em !important;
+		}
 		/* Basic */
 
 			h1 {
@@ -3046,7 +3052,9 @@
 /* XSmall */
 
 	@media screen and (max-width: 480px) {
-
+		.myaccount{
+			margin-top: -4em !important;
+		}
 		/* List */
 
 			ul.actions {
@@ -3687,6 +3695,6 @@ line-height: 2.1em;
 	margin-left: 7.5em;
 }
 .button.disable{
-	background-color: #e9cd31  !important;
-	border-color: #e9cd31  !important;
+	background-color: rgba(0,0,0,0.35) !important;
+	border-color: rgba(0,0,0,0.5) !important;
 }
