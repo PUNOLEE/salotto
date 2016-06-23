@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="697bd640-7872-46ea-af17-be7cbe3d439a" name="Default" comment="jar">
+    <list default="true" id="697bd640-7872-46ea-af17-be7cbe3d439a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/salojava/dao/PortfolioDao.class" afterPath="$PROJECT_DIR$/target/classes/com/salojava/dao/PortfolioDao.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/salojava/servlet/CommentServlet.class" afterPath="$PROJECT_DIR$/target/classes/com/salojava/servlet/CommentServlet.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/salojava/servlet/DeleteServlet.class" afterPath="$PROJECT_DIR$/target/classes/com/salojava/servlet/DeleteServlet.class" />
@@ -16,11 +16,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/salojava/WEB-INF/classes/com/salojava/servlet/PageLocationServlet.class" afterPath="$PROJECT_DIR$/target/salojava/WEB-INF/classes/com/salojava/servlet/PageLocationServlet.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/salojava/WEB-INF/classes/com/salojava/servlet/SearchServlet.class" afterPath="$PROJECT_DIR$/target/salojava/WEB-INF/classes/com/salojava/servlet/SearchServlet.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/salojava/WEB-INF/classes/com/salojava/servlet/UploadProcessorServlet.class" afterPath="$PROJECT_DIR$/target/salojava/WEB-INF/classes/com/salojava/servlet/UploadProcessorServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/salo.iml" afterPath="$PROJECT_DIR$/salo.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/header.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/header.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/salojava/Gallery.jsp" afterPath="$PROJECT_DIR$/target/salojava/Gallery.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/salojava/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/target/salojava/META-INF/MANIFEST.MF" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/salojava/SearchResult.jsp" afterPath="$PROJECT_DIR$/target/salojava/SearchResult.jsp" />
@@ -92,7 +88,7 @@
       <file leaf-file-name="BBS_Post.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/BBS_Post.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
+            <state relative-caret-position="1091">
               <caret line="221" column="0" selection-start-line="221" selection-start-column="0" selection-end-line="221" selection-end-column="0" />
               <folding />
             </state>
@@ -143,6 +139,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="Ashe" />
         <option value="puno" />
       </list>
     </option>
@@ -1235,7 +1232,7 @@
       <workItem from="1466599342446" duration="32145000" />
       <workItem from="1466678379841" duration="8704000" />
       <workItem from="1466695019032" duration="11637000" />
-      <workItem from="1466711397765" duration="1385000" />
+      <workItem from="1466711397765" duration="1415000" />
     </task>
     <task id="LOCAL-00001" summary="a little change">
       <created>1465218846146</created>
@@ -1251,11 +1248,18 @@
       <option name="project" value="LOCAL" />
       <updated>1465220465366</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="all">
+      <created>1466712931606</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1466712931606</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103288000" />
+    <option name="totallyTimeSpent" value="103318000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1317,7 +1321,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="a little change" />
     <MESSAGE value="jar" />
-    <option name="LAST_COMMIT_MESSAGE" value="jar" />
+    <MESSAGE value="all" />
+    <option name="LAST_COMMIT_MESSAGE" value="all" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1381,6 +1386,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2655">
           <caret line="182" column="26" selection-start-line="182" selection-start-column="26" selection-end-line="182" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1745,7 +1753,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/BBS_Post.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
+        <state relative-caret-position="1091">
           <caret line="221" column="0" selection-start-line="221" selection-start-column="0" selection-end-line="221" selection-end-column="0" />
           <folding />
         </state>
